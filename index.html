@@ -645,7 +645,7 @@ main {
         <input
             id="searchInput"
             type="text"
-            placeholder="Search: Iran+children+Amnesty"
+            placeholder="Search: "
         >
 
         <button id="searchButton">
@@ -20691,7 +20691,23 @@ function searchDatabase() {
 
 }
 
+const quickSearchSection =
+document.querySelector(".quick-search");
 
+if (quickSearchSection) {
+
+    const heading =
+    document.createElement("h2");
+
+    heading.textContent =
+    "Quick Search";
+
+    heading.className =
+    "quick-search-heading";
+
+    quickSearchSection.prepend(heading);
+
+}
 
 function quickSearch(term) {
 
