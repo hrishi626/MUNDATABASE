@@ -592,6 +592,8 @@ main {
 
 /* Quick Search */
 
+/* Quick Search */
+
 .quick-search-heading {
 
     text-align: center;
@@ -633,6 +635,35 @@ main {
     flex-wrap: wrap;
 
     gap: 10px;
+
+}
+
+
+.search-explanation {
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+}
+
+
+.search-instructions {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+}
+
+
+.search-instructions p {
+
+    margin: 6px 0;
 
 }
     </style>
@@ -705,19 +736,23 @@ main {
     </div>
 
 
-    <div class="search-explanation">
+       <div class="search-explanation">
 
-        Use <code>+</code> between terms.
+        <div class="search-instructions">
 
-        <br>
+            <p>
+                Use <strong>+</strong> between terms.
+            </p>
 
-        <code>Iran+children</code>
-        means both Iran AND children.
+            <p>
+                Iran+children means both Iran AND children.
+            </p>
 
-        <br>
+            <p>
+                Israel+ICCPR+Article 6 searches for all three terms.
+            </p>
 
-        <code>Israel+ICCPR+Article 6</code>
-        searches for all three terms.
+        </div>
 
     </div>
 
