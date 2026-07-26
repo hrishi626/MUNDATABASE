@@ -7,7 +7,117 @@
 <title>Israel–Iran MUN Research Database</title>
 
 <style>
+#loginScreen {
 
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    z-index: 9999;
+
+}
+
+
+.login-box {
+
+    width: min(420px, 90%);
+
+    text-align: center;
+
+}
+
+
+.login-box h1 {
+
+    font-size: 28px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.login-box p {
+
+    color: #666;
+
+    margin-bottom: 28px;
+
+}
+
+
+#usernameInput {
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border: 1px solid #d0d0d0;
+
+    border-radius: 24px;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+}
+
+
+#usernameInput:focus {
+
+    border-color: #555;
+
+}
+
+
+#loginButton {
+
+    margin-top: 18px;
+
+    padding: 12px 28px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}
+
+
+#loginButton:hover {
+
+    opacity: 0.85;
+
+}
+
+
+#loginError {
+
+    color: #c62828;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+}
 :root {
     --background: #0b1120;
     --background-secondary: #111827;
@@ -470,7 +580,31 @@ main {
 </head>
 
 <body>
+<div id="loginScreen">
 
+    <div class="login-box">
+
+        <h1>GLOBAL INCIDENT DATABASE</h1>
+
+        <p>Research. Search. Prepare.</p>
+
+        <input
+            type="text"
+            id="usernameInput"
+            placeholder="Enter your name"
+            autocomplete="off"
+        >
+
+        <button id="loginButton">
+            Continue
+        </button>
+
+        <p id="loginError"></p>
+
+    </div>
+
+</div>
+    <div id="databaseApp">
 <header>
 
     <div class="header-inner">
@@ -14205,6 +14339,6244 @@ INCIDENTS 231–255
     "— Will Iran support independent investigations into civilian harm caused by all armed groups receiving Iranian military support?"
 },
 
+    {
+    id: 231,
+
+    title:
+    "Iran-backed militias launch attacks against U.S. forces in Iraq and Syria",
+
+    date:
+    "October 2023–2024",
+
+    location:
+    "Iraq and Syria",
+
+    facts:
+    "Following the outbreak of the Gaza war, Iran-backed armed groups repeatedly attacked U.S. personnel and facilities in Iraq and Syria. The United States stated that these attacks threatened its personnel and risked expanding the regional conflict.",
+
+    victims:
+    "U.S. personnel were killed and injured in attacks attributed by the United States to Iran-backed militia groups.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "Protection of personnel under international law",
+        "International peace and security",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Debate on Regional Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sc15650.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What concrete steps did Iran take to stop armed groups it supports from attacking U.S. personnel in Iraq and Syria?",
+        "— Does Iran accept that repeated attacks by groups receiving its support can contribute to regional escalation?"
+    ],
+
+    followUp:
+    "— If Iran claims that these groups act independently, why does it continue providing them with military and political support?"
+},
+
+{
+    id: 232,
+
+    title:
+    "Iran-backed militia attacks kill three U.S. service members at Tower 22",
+
+    date:
+    "28 January 2024",
+
+    location:
+    "Jordan",
+
+    facts:
+    "A drone attack struck Tower 22, a U.S. facility in Jordan, killing three U.S. service members and injuring others. The United States attributed the attack to Iran-backed militants.",
+
+    victims:
+    "Three U.S. service members were killed and numerous others were injured.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "Potential State responsibility for aid or assistance",
+        "Protection of military personnel"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United States Department of Defense",
+
+            title:
+            "Pentagon Briefing on Tower 22 Attack",
+
+            url:
+            "https://www.defense.gov/News/Transcripts/Transcript/Article/3667341/pentagon-press-secretary-air-force-maj-gen-pat-ryder-holds-a-press-briefing/"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran justify continued support for armed groups after an attack attributed to Iran-backed militants killed three U.S. service members?",
+        "— What measures did Iran take to prevent its allied groups from conducting attacks capable of triggering a wider conflict?"
+    ],
+
+    followUp:
+    "— Does Iran accept that sustained military support to armed groups creates foreseeable risks of escalation?"
+},
+
+{
+    id: 233,
+
+    title:
+    "United States strikes Iranian-linked facilities after Tower 22 attack",
+
+    date:
+    "2 February 2024",
+
+    location:
+    "Iraq and Syria",
+
+    facts:
+    "Following the killing of three U.S. service members at Tower 22, the United States conducted strikes against facilities it said were connected to Iran's Islamic Revolutionary Guard Corps and affiliated militias in Iraq and Syria.",
+
+    victims:
+    "Personnel at the targeted facilities were killed and injured according to reports at the time.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "IHL distinction",
+        "IHL proportionality",
+        "State responsibility and armed-group support"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United States Department of Defense",
+
+            title:
+            "Pentagon Briefing on U.S. Strikes in Iraq and Syria",
+
+            url:
+            "https://www.defense.gov/News/Transcripts/Transcript/Article/3667341/pentagon-press-secretary-air-force-maj-gen-pat-ryder-holds-a-press-briefing/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that attacks by armed groups it supports contributed to the chain of events leading to further military escalation?",
+        "— What safeguards did Iran have to prevent its facilities and allied militias from being used in attacks against foreign forces?"
+    ],
+
+    followUp:
+    "— Does Iran's proxy strategy reduce the risk of war, or can it instead make escalation more likely?"
+},
+
+{
+    id: 234,
+
+    title:
+    "Iran-backed militias attack U.S. diplomatic and military facilities in Iraq",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq",
+
+    facts:
+    "The United States reported attacks by Iran-backed militia groups against U.S. diplomatic facilities and military personnel in Iraq. These attacks were described as a threat to U.S. personnel and Iraqi stability.",
+
+    victims:
+    "Diplomatic personnel, military personnel and other individuals at or near targeted facilities were placed at risk.",
+
+    legalIssues:
+    [
+        "Vienna Convention on Diplomatic Relations",
+        "Protection of diplomatic premises",
+        "UN Charter Article 2(4)",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Briefing on Regional Escalation",
+
+            url:
+            "https://digitallibrary.un.org/record/4044213/files/S_PV.9593-EN.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran support armed groups accused of attacking diplomatic and military facilities in Iraq?",
+        "— Does Iran condemn attacks against diplomatic premises even when the facilities belong to a State it politically opposes?"
+    ],
+
+    followUp:
+    "— What responsibility does Iran accept for the conduct of armed groups that receive its support?"
+},
+
+{
+    id: 235,
+
+    title:
+    "Iran-backed Iraqi militias launch attacks toward Israel",
+
+    date:
+    "October 2023–2024",
+
+    location:
+    "Iraq and Israel",
+
+    facts:
+    "Iran-backed militias operating in Iraq claimed responsibility for attacks directed toward Israel following the outbreak of the Gaza war. Israel reported that these groups launched drones and missiles from Iraqi territory.",
+
+    victims:
+    "Civilian and military populations in Israel were exposed to long-range drone and missile attacks.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "IHL distinction",
+        "Territorial sovereignty",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Israeli Letter on Attacks by Iranian-Backed Militias in Iraq",
+
+            url:
+            "https://documents.un.org/doc/undoc/gen/n24/354/10/pdf/n2435410.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran support armed groups launching attacks from Iraqi territory against Israel?",
+        "— Does Iran accept that attacks launched from one State against another can threaten Iraq's sovereignty and regional stability?"
+    ],
+
+    followUp:
+    "— Does Iran believe that armed groups should be permitted to use the territory of another State to conduct cross-border attacks?"
+},
+
+{
+    id: 236,
+
+    title:
+    "Iran-backed militias reportedly launch Shahed drones toward Israel",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq and Israel",
+
+    facts:
+    "Israeli communications to the United Nations alleged that Iranian-backed militias in Iraq launched Shahed-type unmanned aerial vehicles toward Israel, alongside other drone and missile attacks.",
+
+    victims:
+    "Civilian populations and infrastructure in Israel were placed at risk by long-range unmanned aerial attacks.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "IHL distinction",
+        "Protection of civilians",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Israeli Communication on Attacks by Iranian-Backed Militias",
+
+            url:
+            "https://documents.un.org/doc/undoc/gen/n24/354/10/pdf/n2435410.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— What controls does Iran impose over the use of Iranian-origin drone technology by allied armed groups?",
+        "— How can Iran deny responsibility for foreseeable attacks when its military technology is supplied to groups conducting those attacks?"
+    ],
+
+    followUp:
+    "— Does Iran support independent investigations into the origin and transfer of weapons used by armed groups operating in Iraq?"
+},
+
+{
+    id: 237,
+
+    title:
+    "Iran-backed militias launch attacks from Iraqi territory despite Iraqi sovereignty",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq",
+
+    facts:
+    "The use of Iraqi territory by Iran-backed armed groups to conduct attacks against foreign targets raised concerns about Iraq's sovereignty and its ability to exercise exclusive control over armed force within its territory.",
+
+    victims:
+    "Iraqi sovereignty, regional security and civilian populations were placed at risk by the expansion of attacks from Iraqi territory.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(1)",
+        "UN Charter Article 2(4)",
+        "State sovereignty",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Debate on Regional Escalation",
+
+            url:
+            "https://digitallibrary.un.org/record/4044213/files/S_PV.9593-EN.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran recognize the Iraqi Government's right to prevent armed groups from using Iraqi territory for attacks against other States?",
+        "— Why does Iran continue supporting groups whose activities may undermine the sovereignty of Iraq?"
+    ],
+
+    followUp:
+    "— Can Iran claim to respect Iraqi sovereignty while supporting armed groups operating independently of the Iraqi Government?"
+},
+
+{
+    id: 238,
+
+    title:
+    "Iran-backed militias threaten to expand attacks if the regional conflict escalates",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq and the Middle East",
+
+    facts:
+    "Iran-aligned armed groups in Iraq publicly threatened further attacks against U.S. and other foreign targets in response to developments involving Israel, Gaza and the wider regional conflict.",
+
+    victims:
+    "Foreign military personnel, diplomatic personnel and civilian populations faced increased risks of regional escalation.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "UN Charter Article 2(4)",
+        "Protection of civilians",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Panel of Experts Report on Houthi and Regional Armed-Group Networks",
+
+            url:
+            "https://documents.un.org/doc/undoc/gen/n24/259/53/pdf/n2425953.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran continue supporting groups that threaten to expand regional conflicts?",
+        "— Does Iran believe that publicly threatening attacks is compatible with its stated commitment to regional stability?"
+    ],
+
+    followUp:
+    "— What mechanism exists to prevent Iran's allied groups from independently escalating conflicts?"
+},
+
+{
+    id: 239,
+
+    title:
+    "Houthi and Iraqi armed groups increase military coordination",
+
+    date:
+    "2024",
+
+    location:
+    "Yemen and Iraq",
+
+    facts:
+    "A United Nations Panel of Experts reported increasing cooperation between the Houthis and Iraqi armed groups. The Houthi leadership acknowledged coordination with the so-called Islamic Resistance in Iraq.",
+
+    victims:
+    "The expanding cooperation between armed groups created risks of coordinated attacks across multiple theatres.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "Arms embargo obligations",
+        "Potential State responsibility for aid or assistance",
+        "UN Security Council Resolution 2216 (2015)"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Panel of Experts Report on Houthi Regional Networks",
+
+            url:
+            "https://documents.un.org/doc/undoc/gen/n24/259/53/pdf/n2425953.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran permit allied armed groups to deepen military coordination across different countries?",
+        "— Does Iran accept that cooperation between armed groups can increase the scale and reach of regional attacks?"
+    ],
+
+    followUp:
+    "— If Iran claims that each group acts independently, how does it explain military coordination between groups aligned with its regional network?"
+},
+
+{
+    id: 240,
+
+    title:
+    "Kata'ib Hezbollah reportedly supports Houthi fundraising and regional coordination",
+
+    date:
+    "2024",
+
+    location:
+    "Iraq and Yemen",
+
+    facts:
+    "A United Nations Panel of Experts reported fundraising and increasing cooperation involving Iraqi armed groups and the Houthis. Kata'ib Hezbollah was identified as one of the groups involved in the broader network described in the report.",
+
+    victims:
+    "The financial and military support networks increased the ability of armed groups to continue operations across the region.",
+
+    legalIssues:
+    [
+        "Arms embargo obligations",
+        "International peace and security",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Panel of Experts Report on Houthi Cooperation with Iraqi Armed Groups",
+
+            url:
+            "https://documents.un.org/doc/undoc/gen/n24/259/53/pdf/n2425953.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— What steps has Iran taken to prevent financial and military networks linked to its allies from expanding regional armed conflicts?",
+        "— Does Iran accept that financial support to armed groups can facilitate attacks even when the supporting State does not directly order a specific operation?"
+    ],
+
+    followUp:
+    "— Does Iran support international monitoring of financial transfers to armed groups operating across the Middle East?"
+},
+
+{
+    id: 241,
+
+    title:
+    "Iran-backed groups attack Israel from multiple regional theatres",
+
+    date:
+    "October 2023–2024",
+
+    location:
+    "Lebanon, Yemen, Iraq and Syria",
+
+    facts:
+    "Following the outbreak of the Gaza war, armed groups aligned with Iran conducted or claimed attacks from multiple locations across the region. The United Nations described the resulting spread of violence as a serious risk to regional peace and security.",
+
+    victims:
+    "Civilians, military personnel, commercial sailors and humanitarian operations across several States were affected by the regional escalation.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "IHL distinction",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Briefing on Regional Escalation and Iranian-Backed Groups",
+
+            url:
+            "https://press.un.org/en/2024/sc15650.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran justify a strategy in which armed groups aligned with it operate across several separate conflict zones?",
+        "— Does Iran accept that the simultaneous activation of multiple armed groups increases the risk of a wider regional war?"
+    ],
+
+    followUp:
+    "— What distinguishes Iran's regional network from a coordinated military strategy designed to pressure multiple opponents simultaneously?"
+},
+
+{
+    id: 242,
+
+    title:
+    "Iranian support to Hezbollah is linked to continued rocket and missile attacks",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Lebanon and Israel",
+
+    facts:
+    "United Nations discussions repeatedly identified Iranian support for Hezbollah while reporting continued rocket, missile, drone and anti-tank attacks from Lebanon toward Israel.",
+
+    victims:
+    "Civilian populations on both sides of the Blue Line were killed, injured and displaced.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 1559 (2004)",
+        "UN Security Council Resolution 1701 (2006)",
+        "IHL distinction",
+        "Protection of civilians"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Briefing on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran continue supporting Hezbollah despite repeated UN demands concerning the presence of unauthorized weapons in Lebanon?",
+        "— What responsibility does Iran accept for weapons provided to a group that conducts attacks across the Blue Line?"
+    ],
+
+    followUp:
+    "— Does Iran support the full implementation of Security Council Resolution 1701, including the absence of unauthorized armed forces in the area?"
+},
+
+{
+    id: 243,
+
+    title:
+    "Hezbollah launches hundreds of missiles, rockets and drones during escalation",
+
+    date:
+    "September 2024",
+
+    location:
+    "Lebanon and Israel",
+
+    facts:
+    "The UN Secretary-General reported that Hezbollah launched hundreds of missiles, rockets and drones into northern Israel during a period of intense escalation along the Blue Line.",
+
+    victims:
+    "Civilian communities in northern Israel were exposed to large-scale rocket and drone attacks.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "IHL precautions in attack",
+        "UN Security Council Resolution 1701 (2006)",
+        "Protection of civilians"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Briefing on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What military necessity justified the launch of hundreds of missiles, rockets and drones toward northern Israel?",
+        "— What measures did Iran take to ensure that Hezbollah's weapons were not used indiscriminately?"
+    ],
+
+    followUp:
+    "— Does Iran accept that the scale of an attack can itself create serious concerns regarding distinction and proportionality?"
+},
+
+{
+    id: 244,
+
+    title:
+    "Hezbollah's attacks contribute to the displacement of civilians on both sides of the Blue Line",
+
+    date:
+    "October 2023–September 2024",
+
+    location:
+    "Lebanon and Israel",
+
+    facts:
+    "The UN reported that nearly 200,000 people within Lebanon and more than 60,000 people from northern Israel had fled their homes amid the escalating exchanges of fire.",
+
+    victims:
+    "Hundreds of thousands of civilians were displaced from their homes.",
+
+    legalIssues:
+    [
+        "Protection of civilians",
+        "Protection against forced displacement",
+        "IHL",
+        "UN Security Council Resolution 1701 (2006)"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Briefing on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran justify continuing military support for Hezbollah while civilians on both sides are driven from their homes?",
+        "— Does Iran accept that proxy warfare can create mass displacement even when the supporting State is not directly fighting?"
+    ],
+
+    followUp:
+    "— What concrete diplomatic alternative has Iran offered to replace continued military escalation by Hezbollah?"
+},
+
+{
+    id: 245,
+
+    title:
+    "Hezbollah's continued armed activity violates Security Council Resolutions 1559 and 1701",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The UN Secretary-General stated that the daily use of weapons by non-State armed groups in Lebanon violated Security Council Resolutions 1559 and 1701. Iran is a major political and military supporter of Hezbollah.",
+
+    victims:
+    "Lebanese sovereignty and civilian security were affected by the continued presence and use of weapons by non-State armed groups.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 1559 (2004)",
+        "UN Security Council Resolution 1701 (2006)",
+        "Lebanese sovereignty",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Briefing on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22400.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran support the full implementation of Resolutions 1559 and 1701, including the disarmament of non-State armed groups?",
+        "— If yes, why does Iran continue providing military support to Hezbollah?"
+    ],
+
+    followUp:
+    "— Can Iran simultaneously claim to support Lebanese sovereignty and support an armed group operating independently of the Lebanese State?"
+},
+
+{
+    id: 246,
+
+    title:
+    "Iran-backed groups threaten to drag Iraq into the regional conflict",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq",
+
+    facts:
+    "The United States warned that Iran-backed militias operating in Iraq risked dragging Iraq into a regional conflict that many Iraqis did not want. The attacks also created pressure on the Iraqi Government to control armed groups operating within its territory.",
+
+    victims:
+    "Iraqi civilians, foreign personnel and Iraq's national security interests were placed at risk.",
+
+    legalIssues:
+    [
+        "State sovereignty",
+        "UN Charter Article 2(1)",
+        "International peace and security",
+        "Non-State armed groups"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United States Department of State",
+
+            title:
+            "Department Press Briefing on Iranian-Backed Militias in Iraq",
+
+            url:
+            "https://2021-2025.state.gov/briefings/department-press-briefing-october-7-2024/"
+        }
+    ],
+
+    pois:
+    [
+        "— Why should Iraq bear the consequences of armed groups supported by Iran conducting attacks from Iraqi territory?",
+        "— Does Iran recognize the Iraqi Government's right to prevent foreign-backed militias from independently conducting regional military operations?"
+    ],
+
+    followUp:
+    "— Does Iran's support for armed groups strengthen or undermine the sovereignty of the States in which those groups operate?"
+},
+
+{
+    id: 247,
+
+    title:
+    "Iran-backed armed groups use the Gaza war to justify attacks across the region",
+
+    date:
+    "October 2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Several Iran-aligned armed groups stated that their attacks were connected to the war in Gaza. The United Nations and several States warned that the conflict was spreading into Lebanon, Yemen, Iraq, Syria and other areas.",
+
+    victims:
+    "Civilians across multiple countries faced the consequences of a conflict spreading across national borders.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "UN Charter Article 2(4)",
+        "Protection of civilians",
+        "IHL"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Briefing on Regional Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sc15782.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why should civilians in Iraq, Lebanon, Yemen and other States bear the consequences of a conflict occurring primarily in Gaza?",
+        "— Does Iran accept that political solidarity with Palestinians does not legally justify attacks against unrelated civilians?"
+    ],
+
+    followUp:
+    "— Can Iran identify the legal basis for armed groups in multiple countries launching attacks against separate States in response to the Gaza war?"
+},
+
+{
+    id: 248,
+
+    title:
+    "Iranian weapons support is accused of enabling attacks by regional armed groups",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The United Nations and several Member States accused Iran of providing weapons and advanced military capabilities to regional armed groups, including missiles and drones used in attacks across the region. Iran rejects many accusations regarding the extent of its responsibility.",
+
+    victims:
+    "Civilians, military personnel, commercial sailors and humanitarian operations were affected by attacks involving weapons attributed to Iran-backed groups.",
+
+    legalIssues:
+    [
+        "Potential State responsibility for aid or assistance",
+        "Arms embargo obligations",
+        "International humanitarian law",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Briefing on Houthi Attacks and Iranian Support",
+
+            url:
+            "https://press.un.org/en/2024/sc15773.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What controls does Iran use to prevent weapons transferred to allied groups from being used against civilians?",
+        "— Does Iran accept any responsibility when weapons it supplies are used in foreseeable attacks?"
+    ],
+
+    followUp:
+    "— Will Iran support independent investigations into the origin of weapons used by armed groups in the region?"
+},
+
+{
+    id: 249,
+
+    title:
+    "Iranian-origin drones are linked to Houthi attacks against Israel",
+
+    date:
+    "19 July 2024",
+
+    location:
+    "Yemen and Israel",
+
+    facts:
+    "The Houthis launched a drone attack against Tel Aviv on 19 July 2024 that caused civilian casualties and property damage. A UN briefing reported that Israel identified the drone as a modified Iranian Samad-3 drone launched from Yemen.",
+
+    victims:
+    "The attack caused civilian casualties and significant property damage in Tel Aviv.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "Protection of civilians",
+        "UN Charter Article 2(4)",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Briefing on Houthi Attack against Tel Aviv",
+
+            url:
+            "https://press.un.org/en/2024/sc15773.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran respond to the identification of an Iranian Samad-3 drone in an attack that caused civilian casualties in Tel Aviv?",
+        "— What controls does Iran impose over the transfer and use of its drone technology by the Houthis?"
+    ],
+
+    followUp:
+    "— Does Iran support an independent investigation into the origin of the drone used in the attack?"
+},
+
+{
+    id: 250,
+
+    title:
+    "Houthi attacks on Israel are described as enabled by Iranian weapons support",
+
+    date:
+    "2024",
+
+    location:
+    "Yemen and Israel",
+
+    facts:
+    "During a Security Council briefing, the United States stated that Iran fully enabled the Houthis to launch attacks against Israel and other countries in the region, while also citing Iranian provision of weapons and violations of relevant arms restrictions.",
+
+    victims:
+    "Civilian populations and regional infrastructure were exposed to attacks conducted by the Houthis.",
+
+    legalIssues:
+    [
+        "Arms embargo obligations",
+        "Potential State responsibility for aid or assistance",
+        "International peace and security",
+        "IHL protection of civilians"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Briefing on Houthi Attack against Tel Aviv",
+
+            url:
+            "https://press.un.org/en/2024/sc15773.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran deny providing the military capabilities that allow the Houthis to conduct long-range attacks?",
+        "— If Iran denies responsibility for Houthi attacks, what responsibility does it accept for supplying or enabling the weapons used?"
+    ],
+
+    followUp:
+    "— Does Iran support international verification of weapons transfers to the Houthis?"
+},
+
+{
+    id: 251,
+
+    title:
+    "Iran-backed groups' activities contribute to the regionalization of the Gaza conflict",
+
+    date:
+    "October 2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The United Nations reported that violence connected to the Gaza war spread across multiple fronts, including the Lebanon-Israel border, the Red Sea, Iraq, Syria and attacks involving Iran and Iran-aligned groups.",
+
+    victims:
+    "Civilians across the Middle East faced displacement, death, injury and disruption to essential services.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "UN Charter Article 2(4)",
+        "Protection of civilians",
+        "IHL"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council Briefing on Regional Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sc15782.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that support for multiple armed groups has contributed to the geographic expansion of the conflict?",
+        "— What responsibility does Iran accept for the regional consequences of its support network?"
+    ],
+
+    followUp:
+    "— Can Iran demonstrate that its regional strategy has reduced violence rather than expanded it?"
+},
+
+{
+    id: 252,
+
+    title:
+    "Iran-backed groups are accused of attacking foreign forces while claiming to defend regional security",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq, Syria and the wider Middle East",
+
+    facts:
+    "Iran-backed armed groups conducted attacks against U.S. personnel and facilities while Iran and its allies presented their activities as resistance against foreign military presence and Israeli policies.",
+
+    victims:
+    "Foreign military personnel, diplomatic personnel and civilians near targeted locations faced risks from attacks and retaliation.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "Protection of civilians",
+        "State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Debate on Regional Escalation",
+
+            url:
+            "https://digitallibrary.un.org/record/4044213/files/S_PV.9593-EN.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— How can Iran claim that support for armed groups promotes regional security when those groups repeatedly attack foreign forces?",
+        "— Does Iran distinguish between legitimate resistance and attacks that risk triggering wider interstate conflict?"
+    ],
+
+    followUp:
+    "— What legal standard does Iran use to determine when support for an armed group becomes destabilizing rather than defensive?"
+},
+
+{
+    id: 253,
+
+    title:
+    "Iran-backed armed groups create risks of retaliation against civilian populations",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq, Syria, Lebanon and Yemen",
+
+    facts:
+    "Attacks by Iran-aligned armed groups were followed in several instances by retaliatory military strikes by the United States or Israel. The resulting cycle of attack and retaliation increased risks to civilians and infrastructure.",
+
+    victims:
+    "Civilian populations living near military facilities and conflict zones faced increased risks from both initial attacks and retaliation.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "IHL proportionality",
+        "Protection of civilians",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Briefing on Regional Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sc15909.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that attacks by its allied groups can create foreseeable risks of retaliation against the populations living near them?",
+        "— What steps does Iran take to prevent armed groups from placing civilian populations in the path of retaliation?"
+    ],
+
+    followUp:
+    "— Does Iran consider the foreseeable risk of retaliation when deciding whether to provide military support to armed groups?"
+},
+
+{
+    id: 254,
+
+    title:
+    "Iran's regional armed-group network is accused of undermining State control over weapons",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Lebanon, Iraq, Syria and Yemen",
+
+    facts:
+    "The continued operation of powerful armed groups supported by Iran raised concerns about the ability of national governments to maintain exclusive control over weapons and military operations within their territories.",
+
+    victims:
+    "National sovereignty, civilian security and the ability of States to prevent unauthorized armed activity were affected.",
+
+    legalIssues:
+    [
+        "State sovereignty",
+        "UN Charter Article 2(1)",
+        "UN Security Council Resolution 1559 (2004)",
+        "UN Security Council Resolution 1701 (2006)"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Briefing on Lebanon and Regional Armed Groups",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran believe national governments should have exclusive control over armed forces within their territories?",
+        "— If so, why does Iran support armed groups operating independently of the governments of Lebanon, Iraq, Syria and Yemen?"
+    ],
+
+    followUp:
+    "— Is Iran's support for non-State armed groups compatible with the principle of State sovereignty?"
+},
+
+{
+    id: 255,
+
+    title:
+    "UN officials warn that Iran-aligned regional escalation risks a wider war",
+
+    date:
+    "2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "United Nations officials repeatedly warned that escalating attacks involving Israel, Hezbollah, the Houthis and other armed groups could develop into a wider regional conflict. Iran's support for several of these groups was repeatedly raised by Member States during Security Council discussions.",
+
+    victims:
+    "Civilians across the region faced the prospect of a wider conflict causing further deaths, displacement and destruction.",
+
+    legalIssues:
+    [
+        "UN Charter Article 1(1)",
+        "International peace and security",
+        "Protection of civilians",
+        "UN Security Council Resolutions 1559 and 1701"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Briefing on Regional Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sc15650.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What concrete steps has Iran taken to prevent its allied armed groups from triggering a wider regional war?",
+        "— Does Iran accept that supporting several armed groups operating across multiple conflict zones creates a serious risk of uncontrolled escalation?"
+    ],
+
+    followUp:
+    "— Will Iran support a regional mechanism requiring all armed groups to cease attacks that threaten international peace and security?"
+},
+
+    {
+    id: 256,
+
+    title:
+    "Iran is accused of transferring ballistic missile technology to the Houthis",
+
+    date:
+    "2015–2024",
+
+    location:
+    "Iran and Yemen",
+
+    facts:
+    "United Nations experts and Member States have repeatedly examined allegations that Iran supplied or enabled the transfer of missile technology and components to the Houthis. The Houthis subsequently developed and used increasingly advanced ballistic and cruise missile systems.",
+
+    victims:
+    "Civilian populations and commercial shipping in the region were exposed to long-range missile attacks.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 2216 (2015)",
+        "Arms transfer restrictions",
+        "Potential State responsibility for aid or assistance",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Final Report of the Panel of Experts on Yemen",
+
+            url:
+            "https://documents.un.org/doc/undoc/gen/n24/259/53/pdf/n2425953.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran explain the appearance of advanced missile technology in the arsenal of an armed group subject to UN restrictions?",
+        "— What controls does Iran use to prevent its missile technology from reaching the Houthis?"
+    ],
+
+    followUp:
+    "— Does Iran support independent international investigations into the origin of Houthi missile components?"
+},
+
+{
+    id: 257,
+
+    title:
+    "Houthi ballistic missile capabilities expand during the Yemen conflict",
+
+    date:
+    "2015–2024",
+
+    location:
+    "Yemen",
+
+    facts:
+    "The Houthi movement developed increasingly sophisticated ballistic missile capabilities during the Yemen conflict. United Nations experts investigated the origin of components and the role of external supply networks in the development of these systems.",
+
+    victims:
+    "Civilians in Yemen and neighboring States were exposed to long-range missile attacks.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 2216 (2015)",
+        "Arms transfer restrictions",
+        "IHL distinction",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Panel of Experts Report on Yemen",
+
+            url:
+            "https://documents.un.org/doc/undoc/gen/n24/259/53/pdf/n2425953.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— Why did Iran allow an armed non-State group to acquire increasingly advanced missile capabilities?",
+        "— Does Iran deny that its technical support has contributed to the Houthis' military capabilities?"
+    ],
+
+    followUp:
+    "— What safeguards does Iran claim to use to ensure that military technology does not contribute to attacks against civilians?"
+},
+
+{
+    id: 258,
+
+    title:
+    "Houthi missile attacks threaten neighboring States and international shipping",
+
+    date:
+    "2015–2024",
+
+    location:
+    "Yemen and the Red Sea",
+
+    facts:
+    "Houthi missile capabilities have been used in attacks against targets in neighboring States and against shipping in the Red Sea. The increasing range and sophistication of these weapons created risks beyond Yemen's borders.",
+
+    victims:
+    "Civilians, commercial crews and neighboring States were exposed to missile attacks originating from Yemen.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "Law of the Sea",
+        "IHL distinction"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Briefing on Yemen and Red Sea Security",
+
+            url:
+            "https://press.un.org/en/2024/sc15561.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why should neighboring States and international shipping face attacks from a group receiving Iranian support?",
+        "— Does Iran accept that supplying advanced weapons to regional armed groups can create cross-border security threats?"
+    ],
+
+    followUp:
+    "— Does Iran support a system of international monitoring for weapons transferred to armed groups?"
+},
+
+{
+    id: 259,
+
+    title:
+    "Iran is accused of supplying UAV technology to regional armed groups",
+
+    date:
+    "2010s–2024",
+
+    location:
+    "Iran and the Middle East",
+
+    facts:
+    "Iran has developed a significant unmanned aerial vehicle industry. Several Member States have accused Iran of transferring drone technology, components or systems to armed groups in the region, including the Houthis and other Iran-aligned organizations.",
+
+    victims:
+    "Civilians and military personnel in several conflict zones were exposed to drone attacks involving systems alleged to have Iranian origins.",
+
+    legalIssues:
+    [
+        "Potential State responsibility for aid or assistance",
+        "Arms transfer restrictions",
+        "IHL distinction",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Discussions on Iranian UAV Transfers",
+
+            url:
+            "https://press.un.org/en/2024/sc15773.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What controls does Iran impose over the export of its drone technology?",
+        "— Does Iran accept responsibility for investigating the use of Iranian-origin UAV technology by armed groups?"
+    ],
+
+    followUp:
+    "— Will Iran support international tracing of drones used in attacks against civilian targets?"
+},
+
+{
+    id: 260,
+
+    title:
+    "Houthi forces use Iranian-origin drone technology in attacks",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Yemen and the Red Sea",
+
+    facts:
+    "United Nations discussions and Member State submissions identified similarities between Houthi UAV systems and Iranian-designed or Iranian-produced drone technology. The Houthis used drones in attacks against shipping and regional targets.",
+
+    victims:
+    "Commercial sailors, civilians and military personnel were exposed to attacks by unmanned aerial systems.",
+
+    legalIssues:
+    [
+        "Potential State responsibility for aid or assistance",
+        "Arms transfer restrictions",
+        "IHL distinction",
+        "Law of the Sea"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Briefing on Houthi UAV Capabilities",
+
+            url:
+            "https://press.un.org/en/2024/sc15773.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran explain the presence of technology resembling Iranian UAV systems in Houthi attacks?",
+        "— Does Iran support independent technical investigations into the origin of drone components?"
+    ],
+
+    followUp:
+    "— If Iran denies transferring weapons, will it permit international experts to examine recovered systems?"
+},
+
+{
+    id: 261,
+
+    title:
+    "Iran is accused of providing military support to Hezbollah over decades",
+
+    date:
+    "1980s–2024",
+
+    location:
+    "Iran and Lebanon",
+
+    facts:
+    "Iran has provided extensive political, financial and military support to Hezbollah for decades. Hezbollah developed a substantial arsenal of rockets, missiles, drones and other weapons while maintaining an armed structure separate from the Lebanese Armed Forces.",
+
+    victims:
+    "Civilian populations in Lebanon and Israel have been affected by repeated military confrontations involving Hezbollah.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 1559 (2004)",
+        "UN Security Council Resolution 1701 (2006)",
+        "State sovereignty",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Reports on Resolution 1701",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran support an armed organization that maintains military capabilities outside the control of the Lebanese State?",
+        "— Does Iran support the disarmament of all non-State armed groups in Lebanon?"
+    ],
+
+    followUp:
+    "— Can Iran reconcile its support for Hezbollah with the principle of Lebanese sovereignty?"
+},
+
+{
+    id: 262,
+
+    title:
+    "Hezbollah maintains a large arsenal of rockets and missiles",
+
+    date:
+    "2006–2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "Hezbollah maintained a large arsenal of rockets and missiles after the 2006 Lebanon war. The group continued to expand its military capabilities while operating in Lebanon, despite Security Council demands concerning the presence of unauthorized weapons.",
+
+    victims:
+    "Civilian populations in Lebanon and Israel faced risks from the continued accumulation and use of heavy weapons.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 1701 (2006)",
+        "UN Security Council Resolution 1559 (2004)",
+        "IHL distinction",
+        "Protection of civilians"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Report on Resolution 1701",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran continue supplying military capabilities to Hezbollah despite Resolution 1701?",
+        "— What distinction does Iran draw between supporting Lebanon and arming an independent non-State military force?"
+    ],
+
+    followUp:
+    "— Does Iran believe that Hezbollah's arsenal is compatible with the full implementation of Resolution 1701?"
+},
+
+{
+    id: 263,
+
+    title:
+    "Iranian support is linked to Hezbollah's development of precision-guided weapons",
+
+    date:
+    "2010s–2024",
+
+    location:
+    "Iran and Lebanon",
+
+    facts:
+    "Israel and other Member States have accused Iran of helping Hezbollah develop increasingly precise missile and rocket capabilities. These allegations have been raised in the context of concerns over the group's expanding military arsenal.",
+
+    victims:
+    "Civilian populations in Lebanon and Israel faced increased risks from the development of more accurate long-range weapons.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 1701 (2006)",
+        "IHL distinction",
+        "Protection of civilians",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Documentation on Hezbollah Military Capabilities",
+
+            url:
+            "https://digitallibrary.un.org/record/4063563/files/S_2024_721-EN.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran provide precision-guidance technology to Hezbollah?",
+        "— What safeguards does Iran impose to prevent advanced weapons from being used against civilian areas?"
+    ],
+
+    followUp:
+    "— Will Iran support independent verification of the source of advanced missile technology possessed by Hezbollah?"
+},
+
+{
+    id: 264,
+
+    title:
+    "Iran-backed groups use drones and missiles across multiple conflict zones",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Lebanon, Yemen, Iraq, Syria and Israel",
+
+    facts:
+    "Iran-aligned armed groups used rockets, ballistic missiles, cruise missiles and unmanned aerial vehicles across multiple theatres. The use of similar technologies across different conflict zones raised questions about shared supply, training and technical networks.",
+
+    victims:
+    "Civilians, military personnel and commercial shipping were exposed to attacks across several countries.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "Potential State responsibility for aid or assistance",
+        "IHL distinction",
+        "Arms transfer restrictions"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Briefing on Regional Armed Groups",
+
+            url:
+            "https://press.un.org/en/2024/sc15773.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran explain similar weapons systems appearing across multiple armed groups aligned with it?",
+        "— Does Iran coordinate technical assistance between its regional partners?"
+    ],
+
+    followUp:
+    "— Does Iran accept that common weapons technology can indicate a broader military support network?"
+},
+
+{
+    id: 265,
+
+    title:
+    "Iran-backed groups are accused of receiving training and technical assistance",
+
+    date:
+    "2010s–2024",
+
+    location:
+    "Iran and the Middle East",
+
+    facts:
+    "Iran has been accused by several States of providing training, technical assistance and military expertise to allied armed groups. Iran describes many of these relationships as forms of resistance and strategic cooperation.",
+
+    victims:
+    "The transfer of military expertise increased the capabilities of armed groups operating in multiple conflict zones.",
+
+    legalIssues:
+    [
+        "Potential State responsibility for aid or assistance",
+        "International peace and security",
+        "Arms transfer restrictions",
+        "UN Charter Article 2(4)"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Discussions on Regional Armed Groups",
+
+            url:
+            "https://digitallibrary.un.org/record/4044213/files/S_PV.9593-EN.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran provide military training to Hezbollah, the Houthis or other allied armed groups?",
+        "— If Iran provides training, how does it ensure that the training is not used to attack civilians?"
+    ],
+
+    followUp:
+    "— Does Iran believe that training an armed group creates responsibility for foreseeable consequences of that training?"
+},
+
+{
+    id: 266,
+
+    title:
+    "Iran is accused of using the Islamic Revolutionary Guard Corps to support regional armed groups",
+
+    date:
+    "1980s–2024",
+
+    location:
+    "Iran and the Middle East",
+
+    facts:
+    "The Islamic Revolutionary Guard Corps and its Quds Force have been accused by several States of providing funding, training, weapons and strategic support to armed groups across the Middle East. Iran describes these relationships as support for resistance movements and regional security partners.",
+
+    victims:
+    "Civilians and military personnel across several conflict zones were affected by conflicts involving groups alleged to receive Iranian support.",
+
+    legalIssues:
+    [
+        "Potential State responsibility for aid or assistance",
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "IHL"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Discussions on Regional Armed Groups",
+
+            url:
+            "https://digitallibrary.un.org/record/4044213/files/S_PV.9593-EN.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— What is the legal relationship between the Iranian Government, the IRGC and armed groups receiving support?",
+        "— Does Iran accept responsibility for actions carried out by forces acting under the direction of the IRGC?"
+    ],
+
+    followUp:
+    "— What evidence does Iran provide to demonstrate that its support does not amount to direction or control of armed groups?"
+},
+
+{
+    id: 267,
+
+    title:
+    "Iran-backed groups are accused of receiving financial support through transnational networks",
+
+    date:
+    "2010s–2024",
+
+    location:
+    "Iran and the Middle East",
+
+    facts:
+    "Several States have accused Iran and affiliated networks of providing financial support to regional armed groups through direct funding, commercial networks and other financial channels. The groups used financial resources to maintain military capabilities.",
+
+    victims:
+    "Financial support enabled armed groups to sustain military operations and weapons procurement across multiple conflict zones.",
+
+    legalIssues:
+    [
+        "Terrorist financing concerns",
+        "Potential State responsibility for aid or assistance",
+        "International peace and security",
+        "Arms transfer restrictions"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Sanctions and Regional Armed Groups",
+
+            url:
+            "https://press.un.org/en/2024/sc15773.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What mechanisms does Iran use to ensure that financial transfers do not reach armed groups for unlawful attacks?",
+        "— Does Iran support independent monitoring of financial networks linked to its regional partners?"
+    ],
+
+    followUp:
+    "— Does Iran distinguish between legitimate political support and financial assistance that enables armed attacks?"
+},
+
+{
+    id: 268,
+
+    title:
+    "Iran-backed groups conduct attacks without formal declarations of war",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Armed groups aligned with Iran conducted attacks across borders while Iran was not formally declared to be a party to each conflict. This created disputes regarding the relationship between State support, non-State armed groups and the legal consequences of their actions.",
+
+    victims:
+    "Civilians, military personnel and commercial shipping were affected by attacks conducted by non-State armed groups.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International humanitarian law",
+        "State responsibility",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Debate on Regional Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sc15650.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— If Iran is not formally at war with these States, what legal justification does it provide for supporting groups conducting attacks against them?",
+        "— Does Iran believe that indirect warfare avoids the obligations applicable to direct military action?"
+    ],
+
+    followUp:
+    "— Can a State avoid all legal consequences simply by acting through a non-State armed group?"
+},
+
+{
+    id: 269,
+
+    title:
+    "Iran-backed groups are accused of creating a multi-front strategy against Israel",
+
+    date:
+    "October 2023–2024",
+
+    location:
+    "Israel and surrounding region",
+
+    facts:
+    "Following the outbreak of the Gaza war, Israel and other States accused Iran of coordinating or supporting pressure against Israel from Lebanon, Yemen, Iraq and Syria. Iran denied directing every individual attack.",
+
+    victims:
+    "Civilians across Israel and neighboring States were exposed to attacks and the risk of wider escalation.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "IHL distinction",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Briefing on Regional Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sc15782.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran deny that it coordinates strategy between its regional allies?",
+        "— If Iran does not direct individual attacks, does it still accept responsibility for creating the military capacity used in those attacks?"
+    ],
+
+    followUp:
+    "— What is the difference between strategic coordination and direct operational control in Iran's regional network?"
+},
+
+{
+    id: 270,
+
+    title:
+    "Iran-backed groups threaten international maritime security",
+
+    date:
+    "November 2023–2024",
+
+    location:
+    "Red Sea and Gulf of Aden",
+
+    facts:
+    "The Houthi attacks on commercial vessels created a major international maritime security crisis. Several States accused Iran of providing military support that enabled the Houthis to maintain their missile and drone campaign.",
+
+    victims:
+    "Civilian sailors, commercial vessels, international trade and humanitarian operations were affected.",
+
+    legalIssues:
+    [
+        "Law of the Sea",
+        "Freedom of navigation",
+        "UN Security Council Resolution 2722 (2024)",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Resolution 2722",
+
+            url:
+            "https://press.un.org/en/2024/sc15561.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why should international shipping bear the consequences of Iran's support for the Houthis?",
+        "— Does Iran accept that military assistance to a regional ally can create international consequences far beyond the original conflict?"
+    ],
+
+    followUp:
+    "— Will Iran support mechanisms to prevent armed groups from attacking civilian commercial shipping?"
+},
+
+{
+    id: 271,
+
+    title:
+    "Houthi attacks cause commercial vessels to reroute around the Cape of Good Hope",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Red Sea and global maritime routes",
+
+    facts:
+    "The security situation in the Red Sea caused major shipping companies to reroute vessels around the Cape of Good Hope instead of using the Suez Canal route. The longer routes increased travel times, fuel costs and disruption to global trade.",
+
+    victims:
+    "Commercial crews, shipping companies, global supply chains and consumers were affected by the disruption.",
+
+    legalIssues:
+    [
+        "Freedom of navigation",
+        "Law of the Sea",
+        "International peace and security",
+        "UN Security Council Resolution 2722 (2024)"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council Briefing on Red Sea Shipping",
+
+            url:
+            "https://press.un.org/en/2024/sc15561.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept responsibility for the international economic consequences of attacks by a group it supports?",
+        "— Why should uninvolved States and companies bear the cost of rerouting ships because of Houthi attacks?"
+    ],
+
+    followUp:
+    "— Does Iran believe that political objectives justify disrupting a major international trade route?"
+},
+
+{
+    id: 272,
+
+    title:
+    "Iran-backed armed groups are accused of threatening humanitarian access",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Yemen and the Red Sea",
+
+    facts:
+    "The disruption of shipping in the Red Sea created concerns regarding the delivery of humanitarian assistance and essential goods to Yemen and other countries dependent on maritime supply routes.",
+
+    victims:
+    "Millions of civilians dependent on humanitarian and commercial imports faced indirect risks.",
+
+    legalIssues:
+    [
+        "IHL protection of humanitarian operations",
+        "Protection of civilians",
+        "Freedom of navigation",
+        "International humanitarian principles"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council Briefing on Red Sea Humanitarian Risks",
+
+            url:
+            "https://press.un.org/en/2024/sc15552.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What steps did Iran take to ensure that Houthi attacks did not obstruct humanitarian access?",
+        "— Does Iran accept that attacks on shipping can indirectly harm civilians who depend on imported food and medicine?"
+    ],
+
+    followUp:
+    "— Does Iran support a complete separation between military operations and humanitarian maritime routes?"
+},
+
+{
+    id: 273,
+
+    title:
+    "Iran's support for armed groups is accused of undermining ceasefire efforts",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The continued activity of armed groups supported by Iran created concerns that military escalation on multiple fronts could undermine diplomatic efforts to achieve ceasefires and prevent the expansion of the Gaza conflict.",
+
+    victims:
+    "Civilians seeking safety and humanitarian relief faced prolonged conflict and continued displacement.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "UN Charter Article 1(1)",
+        "Protection of civilians",
+        "IHL"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council Briefing on Regional Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sc15782.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran believe that continued military support to allied armed groups helps or undermines ceasefire efforts?",
+        "— What diplomatic conditions would Iran require before ordering or encouraging its partners to stop attacks?"
+    ],
+
+    followUp:
+    "— Can Iran claim to support peace while maintaining military networks capable of reopening multiple fronts?"
+},
+
+{
+    id: 274,
+
+    title:
+    "Iran-backed groups are accused of operating beyond effective State control",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq, Lebanon, Yemen and Syria",
+
+    facts:
+    "Several Iran-aligned armed groups maintained independent military structures and conducted operations outside the direct command of the national governments in whose territories they operated.",
+
+    victims:
+    "National governments, civilians and foreign personnel were affected by the activities of armed groups operating outside unified State command structures.",
+
+    legalIssues:
+    [
+        "State sovereignty",
+        "UN Charter Article 2(1)",
+        "Potential State responsibility",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council Discussions on Non-State Armed Groups",
+
+            url:
+            "https://digitallibrary.un.org/record/4044213/files/S_PV.9593-EN.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran exercise effective control over the armed groups it supports?",
+        "— If Iran does not exercise effective control, why does it continue providing military support to groups capable of independent escalation?"
+    ],
+
+    followUp:
+    "— Is Iran's policy based on control, influence, deterrence or strategic partnership?"
+},
+
+{
+    id: 275,
+
+    title:
+    "Iran's support network is accused of creating a security dilemma for neighboring States",
+
+    date:
+    "2010s–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The expansion of Iranian military partnerships with armed groups across the Middle East has been cited by neighboring States as a major security concern. Iran presents its network as a deterrent against foreign intervention and Israeli military action.",
+
+    victims:
+    "States and civilian populations across the region faced increased military tensions and the risk of conflict escalation.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "UN Charter Article 2(4)",
+        "State sovereignty",
+        "Potential State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Debate on Regional Security",
+
+            url:
+            "https://press.un.org/en/2024/sc15650.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran distinguish between legitimate deterrence and destabilizing military expansion through non-State armed groups?",
+        "— Does Iran acknowledge that its support network causes neighboring States to increase their own military preparations?"
+    ],
+
+    followUp:
+    "— Can a strategy intended as deterrence become destabilizing because every side responds by increasing military capabilities?"
+},
+
+{
+    id: 276,
+
+    title:
+    "Iran's regional partners are accused of increasing the risk of miscalculation",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The existence of multiple armed groups operating independently but aligned with Iran created concerns that a single attack by one group could trigger retaliation involving Iran, Israel, the United States or other States.",
+
+    victims:
+    "Civilians across the region faced increased risks from unintended escalation and retaliatory strikes.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "UN Charter Article 1(1)",
+        "Protection of civilians",
+        "State responsibility"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Briefing on Regional Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sc15782.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What mechanisms does Iran have to prevent one allied group from triggering a war involving Iran itself?",
+        "— Does Iran accept that a network of armed groups creates a greater risk of miscalculation?"
+    ],
+
+    followUp:
+    "— Will Iran support direct communication mechanisms designed to prevent attacks by allied groups from triggering wider war?"
+},
+
+{
+    id: 277,
+
+    title:
+    "Iran's military support to regional partners is accused of prolonging conflicts",
+
+    date:
+    "2010s–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Opponents of Iran argue that continued military assistance to Hezbollah, the Houthis and other armed groups allows these organizations to sustain conflicts that might otherwise move toward political settlement.",
+
+    victims:
+    "Civilians in Lebanon, Yemen, Iraq, Syria and Israel faced prolonged insecurity and displacement.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "Protection of civilians",
+        "Potential State responsibility for aid or assistance",
+        "IHL"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council Discussions on Regional Conflicts",
+
+            url:
+            "https://press.un.org/en/2024/sc15782.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran believe that continued military support makes political settlements more or less likely?",
+        "— What evidence does Iran have that its military partnerships reduce civilian suffering?"
+    ],
+
+    followUp:
+    "— Would Iran support replacing military assistance with diplomatic and humanitarian cooperation?"
+},
+
+{
+    id: 278,
+
+    title:
+    "Iran is accused of using non-State armed groups to create strategic deniability",
+
+    date:
+    "2010s–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran's opponents argue that support for armed groups allows Iran to exert military pressure while denying direct responsibility for individual attacks. Iran rejects the characterization of its relationships as a strategy designed to evade responsibility.",
+
+    victims:
+    "Civilians and military personnel across several conflict zones faced attacks whose attribution was disputed.",
+
+    legalIssues:
+    [
+        "State responsibility",
+        "Potential aid or assistance",
+        "UN Charter Article 2(4)",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Debate on Regional Armed Groups",
+
+            url:
+            "https://digitallibrary.un.org/record/4044213/files/S_PV.9593-EN.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran believe a State can avoid responsibility for foreseeable consequences of support simply because a non-State actor carries out the attack?",
+        "— What legal test does Iran use to distinguish support from direction or control?"
+    ],
+
+    followUp:
+    "— Will Iran accept that indirect support can still create legal consequences under international law?"
+},
+
+{
+    id: 279,
+
+    title:
+    "Iran's regional network is accused of increasing the number of active conflict fronts",
+
+    date:
+    "October 2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The Gaza war was accompanied by military activity involving Hezbollah in Lebanon, the Houthis in the Red Sea and Iran-aligned armed groups in Iraq and Syria. Opponents argued that this created multiple simultaneous conflict fronts.",
+
+    victims:
+    "Civilians across multiple States faced displacement, attacks, economic disruption and the risk of wider war.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "UN Charter Article 1(1)",
+        "Protection of civilians",
+        "IHL"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Briefing on Regional Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sc15782.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that its relationships with multiple armed groups have contributed to the opening of several simultaneous conflict fronts?",
+        "— What steps has Iran taken to prevent the Gaza conflict from spreading into other countries?"
+    ],
+
+    followUp:
+    "— Can Iran demonstrate that its regional alliances have contained conflict rather than expanded it?"
+},
+
+{
+    id: 280,
+
+    title:
+    "Iran's support for regional armed groups becomes a central international security dispute",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran's relationships with Hezbollah, the Houthis and other armed groups became a central issue in international debates concerning regional security. Iran described its alliances as defensive partnerships, while opponents argued that the network enabled cross-border attacks and destabilization.",
+
+    victims:
+    "Civilians, military personnel, commercial sailors and States across the region were affected by the resulting tensions.",
+
+    legalIssues:
+    [
+        "UN Charter Article 1(1)",
+        "UN Charter Article 2(4)",
+        "International humanitarian law",
+        "State responsibility",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Debate on Iran and Regional Armed Groups",
+
+            url:
+            "https://press.un.org/en/2024/sc15650.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What objective limits does Iran place on its support for armed groups operating across the Middle East?",
+        "— Does Iran accept that sustained military support to several armed groups can create responsibilities beyond the individual actions of each group?"
+    ],
+
+    followUp:
+    "— Will Iran support an internationally verified framework governing weapons, training and financial support provided to regional non-State armed groups?"
+},
+
+    /*
+BATCH 2J — IRAN'S ALLIES AND REGIONAL ESCALATION
+OPPONENT ATTACKS AGAINST IRAN AND IRAN-BACKED GROUPS
+INCIDENTS 231–255
+*/
+
+{
+    id: 231,
+
+    title:
+    "Israeli strike on Iranian diplomatic premises in Damascus kills Iranian officials",
+
+    date:
+    "1 April 2024",
+
+    location:
+    "Damascus, Syria",
+
+    facts:
+    "An airstrike hit the Iranian diplomatic compound in Damascus, reportedly killing at least seven people, including senior Iranian officials. The incident triggered an emergency Security Council meeting and widespread international concern over the protection of diplomatic premises.",
+
+    victims:
+    "At least seven people were reportedly killed, including Iranian officials.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "Vienna Convention on Diplomatic Relations",
+        "Protection of diplomatic premises",
+        "State responsibility",
+        "Prohibition on the use of force"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Briefing Security Council on Reported Israeli Attacks against Iran's Diplomatic Premises in Syria",
+
+            url:
+            "https://press.un.org/en/2024/sc15650.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does — justify attacking premises that Iran claims were protected diplomatic facilities?",
+        "— Does — accept that attacks against diplomatic premises create a dangerous precedent for international relations?"
+    ],
+
+    followUp:
+    "— If — claims the strike was a legitimate security operation, why was the status of the diplomatic premises not respected?"
+},
+
+{
+    id: 232,
+
+    title:
+    "Israeli strike kills senior Iranian IRGC commander Mohammad Reza Zahedi in Damascus",
+
+    date:
+    "1 April 2024",
+
+    location:
+    "Damascus, Syria",
+
+    facts:
+    "The Damascus strike killed senior Iranian Islamic Revolutionary Guard Corps commander Mohammad Reza Zahedi and other Iranian personnel. The incident was widely viewed as a major escalation between Israel and Iran.",
+
+    victims:
+    "Mohammad Reza Zahedi and other Iranian personnel were killed.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "Use of force against another State",
+        "State sovereignty",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Briefing Security Council on Reported Israeli Attacks against Iran's Diplomatic Premises in Syria",
+
+            url:
+            "https://press.un.org/en/2024/sc15650.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What legal basis does — claim for conducting a strike against senior Iranian military personnel in Syrian territory?",
+        "— Does — believe that targeted killings inside another State are compatible with the UN Charter?"
+    ],
+
+    followUp:
+    "— Would — accept another State carrying out the same type of strike against its own senior military officials abroad?"
+},
+
+{
+    id: 233,
+
+    title:
+    "Iran launches large-scale drone and missile attack against Israel",
+
+    date:
+    "13–14 April 2024",
+
+    location:
+    "Israel",
+
+    facts:
+    "Iran launched a large-scale attack involving hundreds of drones and missiles toward Israel. The attack was described at the Security Council as an unprecedented direct attack by Iran against Israel from Iranian territory.",
+
+    victims:
+    "The attack created a major risk to civilian populations and regional peace and security.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "UN Charter Article 51",
+        "Self-defence",
+        "Proportionality",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Meets after Iran's Attack against Israel",
+
+            url:
+            "https://press.un.org/en/2024/sc15688.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What specific legal necessity justified launching hundreds of drones and missiles against Israel?",
+        "— How does — demonstrate that the scale of the attack was necessary and proportionate?"
+    ],
+
+    followUp:
+    "— Does — accept that the use of hundreds of projectiles against another State creates a serious risk of uncontrolled regional escalation?"
+},
+
+{
+    id: 234,
+
+    title:
+    "Iranian drones and missiles are intercepted during attack on Israel",
+
+    date:
+    "13–14 April 2024",
+
+    location:
+    "Israel and surrounding airspace",
+
+    facts:
+    "The April attack involved a large number of Iranian drones, cruise missiles and ballistic missiles. Many were intercepted by Israel and supporting States, while the attack nevertheless represented a major direct escalation between Iran and Israel.",
+
+    victims:
+    "Civilian populations across the region were placed at risk by the large-scale missile and drone attack.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "Protection of civilians",
+        "IHL distinction",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Meets after Iran's Attack against Israel",
+
+            url:
+            "https://press.un.org/en/2024/sc15688.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why did — launch weapons capable of reaching densely populated areas?",
+        "— What precautions were taken to ensure that Iranian projectiles would not cause civilian casualties?"
+    ],
+
+    followUp:
+    "— Does — believe that a missile attack can be considered lawful merely because many of the missiles are intercepted?"
+},
+
+{
+    id: 235,
+
+    title:
+    "Iran invokes Article 51 of the UN Charter to justify attack on Israel",
+
+    date:
+    "April 2024",
+
+    location:
+    "United Nations",
+
+    facts:
+    "Iran informed the Security Council that its military response against Israel was carried out pursuant to Article 51 of the UN Charter and described it as a measured and proportionate response to the Damascus strike.",
+
+    victims:
+    "The legal dispute concerned the consequences of the attack on Iranian diplomatic premises and the subsequent risk of wider regional conflict.",
+
+    legalIssues:
+    [
+        "UN Charter Article 51",
+        "Self-defence",
+        "Necessity",
+        "Proportionality"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Digital Library",
+
+            title:
+            "Letter from the Permanent Representative of Iran to the United Nations",
+
+            url:
+            "https://digitallibrary.un.org/record/4044213"
+        }
+    ],
+
+    pois:
+    [
+        "— Does — accept that Article 51 requires necessity and proportionality rather than allowing unlimited retaliation?",
+        "— What specific evidence demonstrates that the military response was necessary and proportionate?"
+    ],
+
+    followUp:
+    "— If — accepts Article 51, does it also accept the legal limitations attached to the right of self-defence?"
+},
+
+{
+    id: 236,
+
+    title:
+    "Israeli strike reported near Iranian nuclear facility at Isfahan",
+
+    date:
+    "19 April 2024",
+
+    location:
+    "Isfahan, Iran",
+
+    facts:
+    "Reports indicated that Israel carried out a limited strike near Isfahan following Iran's large-scale attack against Israel. The incident demonstrated the rapid escalation from indirect conflict into direct attacks between Iran and Israel.",
+
+    victims:
+    "The strike raised concerns about the potential risks of military operations near sensitive nuclear facilities.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "Protection of nuclear facilities",
+        "International peace and security",
+        "Risk of regional escalation"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Calls for Maximum Restraint after Iran-Israel Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22272.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What legal basis does — claim for conducting military operations near sensitive nuclear facilities?",
+        "— Does — accept that strikes near nuclear sites create risks far beyond the immediate military target?"
+    ],
+
+    followUp:
+    "— What safeguards should the international community establish to prevent attacks near nuclear facilities?"
+},
+
+{
+    id: 237,
+
+    title:
+    "Israel conducts strikes against Iranian-linked targets in Syria",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Syria",
+
+    facts:
+    "The United Nations reported continuing Israeli military operations in Syria against targets linked by Israel to Iran and regional armed groups. The strikes became part of a wider pattern of confrontation involving Iranian personnel and allied armed groups operating in Syria.",
+
+    victims:
+    "Military personnel and civilians in Syria were exposed to the consequences of repeated airstrikes and regional escalation.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "Sovereignty of Syria",
+        "Use of force",
+        "State responsibility"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Briefing Security Council on Reported Israeli Attacks against Iran's Diplomatic Premises in Syria",
+
+            url:
+            "https://press.un.org/en/2024/sc15650.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What legal basis does — claim for repeatedly conducting military operations inside Syrian territory?",
+        "— Does — recognize Syria's territorial sovereignty in relation to these operations?"
+    ],
+
+    followUp:
+    "— If — claims self-defence, why does it believe the threat from Iranian-linked groups justifies repeated attacks inside a third country?"
+},
+
+{
+    id: 238,
+
+    title:
+    "Israeli military operations target Hezbollah positions in Lebanon",
+
+    date:
+    "October 2023–2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The United Nations reported extensive Israeli military strikes against Hezbollah positions in Lebanon during the escalating conflict along the Blue Line.",
+
+    victims:
+    "Civilians in Lebanon were killed, injured and displaced during the escalation.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "IHL distinction",
+        "IHL proportionality",
+        "Protection of civilians"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Briefing on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does — distinguish between Hezbollah military targets and nearby civilian populations?",
+        "— What precautions did — take to prevent civilian casualties during strikes in Lebanon?"
+    ],
+
+    followUp:
+    "— Does — accept that the presence of Hezbollah in an area does not remove the obligation to protect civilians?"
+},
+
+{
+    id: 239,
+
+    title:
+    "Israeli strikes kill hundreds in Lebanon during September escalation",
+
+    date:
+    "23–24 September 2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The UN Secretary-General reported that Lebanese authorities said 569 people were killed over Monday and Tuesday during the dramatic escalation, including 50 children and 94 women. More than 1,800 people were injured.",
+
+    victims:
+    "Hundreds of people were killed, including children and women, and more than 1,800 people were injured according to Lebanese authorities.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "IHL proportionality",
+        "Protection of civilians",
+        "UN Charter Article 2(4)"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Hell Is Breaking Loose in Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does — explain the extremely high civilian death toll during the September strikes?",
+        "— What investigation was conducted into civilian deaths and possible violations of IHL?"
+    ],
+
+    followUp:
+    "— Does — accept that defeating an armed group cannot justify attacks that fail to distinguish civilians from combatants?"
+},
+
+{
+    id: 240,
+
+    title:
+    "Israeli strikes displace more than 90,000 people from southern and eastern Lebanon",
+
+    date:
+    "September 2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The UN reported that more than 90,000 people fled southern and eastern Lebanon toward Beirut and the northwest during the escalation.",
+
+    victims:
+    "More than 90,000 civilians were displaced from their homes.",
+
+    legalIssues:
+    [
+        "Protection of civilians",
+        "Prohibition of forced displacement",
+        "IHL proportionality",
+        "International humanitarian law"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Hell Is Breaking Loose in Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What steps did — take to prevent mass civilian displacement during its military campaign?",
+        "— How does — distinguish lawful evacuation from unlawful forced displacement?"
+    ],
+
+    followUp:
+    "— Does — accept that repeated military operations can create unlawful displacement even when the stated target is an armed group?"
+},
+
+{
+    id: 241,
+
+    title:
+    "Israeli strikes damage civilian infrastructure across Lebanon",
+
+    date:
+    "2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The United Nations reported extensive damage to civilian infrastructure and homes during the escalation between Israel and Hezbollah.",
+
+    victims:
+    "Civilian communities lost homes and essential infrastructure, creating additional humanitarian needs.",
+
+    legalIssues:
+    [
+        "Protection of civilian objects",
+        "IHL distinction",
+        "IHL proportionality",
+        "Protection of essential infrastructure"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Remarks on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22421.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What evidence did — possess that damaged civilian infrastructure was being used for military purposes?",
+        "— How did — assess proportionality before striking areas containing civilian infrastructure?"
+    ],
+
+    followUp:
+    "— Does — accept that civilian infrastructure remains protected even in areas where an armed group operates?"
+},
+
+{
+    id: 242,
+
+    title:
+    "Israeli ground incursions cross the Blue Line into Lebanon",
+
+    date:
+    "October 2024",
+
+    location:
+    "Southern Lebanon",
+
+    facts:
+    "The United Nations reported Israeli ground incursions across the Blue Line during the escalation with Hezbollah.",
+
+    victims:
+    "Civilians in southern Lebanon were exposed to ground combat, displacement and destruction.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "Territorial sovereignty",
+        "UN Security Council Resolution 1701",
+        "IHL protection of civilians"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Remarks on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22421.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What legal basis did — invoke for ground operations across the internationally recognized Blue Line?",
+        "— How did — ensure that its operations did not violate Resolution 1701?"
+    ],
+
+    followUp:
+    "— Does — accept that military necessity does not automatically override the sovereignty of another State?"
+},
+
+{
+    id: 243,
+
+    title:
+    "Israeli military operations cause mass displacement in Lebanon",
+
+    date:
+    "2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The UN reported that more than 1.2 million people were displaced or affected in Lebanon during the escalation and that humanitarian needs increased dramatically.",
+
+    victims:
+    "More than 1.2 million people were displaced or otherwise affected.",
+
+    legalIssues:
+    [
+        "Protection of civilians",
+        "Prohibition of forced displacement",
+        "IHL proportionality",
+        "Humanitarian access"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Remarks on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22421.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What measures did — take to minimize the displacement of civilians?",
+        "— How does — justify military operations that resulted in more than one million people being displaced or affected?"
+    ],
+
+    followUp:
+    "— Does — accept that civilian displacement is a serious humanitarian consequence requiring legal investigation?"
+},
+
+{
+    id: 244,
+
+    title:
+    "Israeli military operations in Lebanon endanger UNIFIL personnel",
+
+    date:
+    "2024",
+
+    location:
+    "Southern Lebanon",
+
+    facts:
+    "The United Nations repeatedly expressed concern about the safety of UNIFIL personnel and facilities during exchanges of fire and military operations along the Blue Line.",
+
+    victims:
+    "UN peacekeepers and UN facilities were exposed to danger during the fighting.",
+
+    legalIssues:
+    [
+        "Protection of UN personnel",
+        "UN Security Council Resolution 1701",
+        "International humanitarian law",
+        "UN Charter obligations"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Briefing on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What precautions did — take to ensure that UNIFIL personnel and facilities were not endangered?",
+        "— Does — accept that UN peacekeeping positions must be protected regardless of the military situation?"
+    ],
+
+    followUp:
+    "— Will — support independent investigations into any attack or danger affecting UN personnel?"
+},
+
+{
+    id: 245,
+
+    title:
+    "Israeli airstrikes reportedly kill civilians in Beirut's southern suburbs",
+
+    date:
+    "2024",
+
+    location:
+    "Beirut, Lebanon",
+
+    facts:
+    "The United Nations reported deadly Israeli strikes in Beirut's southern suburbs during the escalation between Israel and Hezbollah.",
+
+    victims:
+    "Civilians in densely populated areas were killed and injured.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "IHL proportionality",
+        "Protection of civilians",
+        "Protection of civilian infrastructure"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General Remarks on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22421.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What intelligence did — use before conducting strikes in densely populated areas of Beirut?",
+        "— How were civilian casualties assessed before and after the strikes?"
+    ],
+
+    followUp:
+    "— Does — accept that urban warfare creates a heightened obligation to take feasible precautions?"
+},
+
+{
+    id: 246,
+
+    title:
+    "Israeli strikes target approximately 1,600 Hezbollah targets in Lebanon",
+
+    date:
+    "23 September 2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The UN Secretary-General reported that the Israel Defense Forces said they had struck approximately 1,600 Hezbollah targets in Lebanon during the escalation.",
+
+    victims:
+    "The large-scale campaign caused extensive civilian casualties and displacement according to Lebanese authorities and the United Nations.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "IHL proportionality",
+        "Precautions in attack",
+        "Protection of civilians"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Hell Is Breaking Loose in Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How did — verify that approximately 1,600 targets were legitimate military objectives?",
+        "— What proportionality assessments were conducted before such a large-scale series of strikes?"
+    ],
+
+    followUp:
+    "— Does — accept that the number of military targets attacked does not itself establish that the operation was lawful?"
+},
+
+{
+    id: 247,
+
+    title:
+    "Israeli attacks in Lebanon kill UNHCR personnel",
+
+    date:
+    "September 2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The UN Secretary-General reported that two UNHCR colleagues were among those killed during the escalation and bombing in Lebanon.",
+
+    victims:
+    "Two United Nations refugee agency personnel were killed.",
+
+    legalIssues:
+    [
+        "Protection of humanitarian personnel",
+        "IHL distinction",
+        "Protection of civilians",
+        "Humanitarian law"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Hell Is Breaking Loose in Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What investigation did — conduct into the deaths of the two UNHCR personnel?",
+        "— What safeguards were in place to protect humanitarian workers from military operations?"
+    ],
+
+    followUp:
+    "— Does — accept that attacks causing the deaths of humanitarian personnel require transparent investigation?"
+},
+
+{
+    id: 248,
+
+    title:
+    "Israeli strikes contribute to deaths of children and women in Lebanon",
+
+    date:
+    "September 2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The United Nations reported that Lebanese authorities recorded hundreds of deaths during the escalation, including 50 children and 94 women in the Monday and Tuesday period described by the Secretary-General.",
+
+    victims:
+    "At least 50 children and 94 women were among those reported killed during the period.",
+
+    legalIssues:
+    [
+        "IHL protection of civilians",
+        "IHL distinction",
+        "IHL proportionality",
+        "Protection of children"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Hell Is Breaking Loose in Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What specific measures did — take to protect children and women during the strikes?",
+        "— How does — investigate civilian deaths occurring during large-scale bombardment?"
+    ],
+
+    followUp:
+    "— Does — accept that the presence of Hezbollah does not make every person in a targeted area a lawful military target?"
+},
+
+{
+    id: 249,
+
+    title:
+    "Israeli attacks in Lebanon contribute to cross-border refugee movements into Syria",
+
+    date:
+    "October 2024",
+
+    location:
+    "Lebanon–Syria border",
+
+    facts:
+    "The UN reported that more than 128,000 people, including Syrian and Lebanese civilians, crossed into Syria during the escalation in Lebanon.",
+
+    victims:
+    "More than 128,000 people crossed into Syria amid the conflict and displacement.",
+
+    legalIssues:
+    [
+        "Protection of civilians",
+        "Forced displacement",
+        "Humanitarian access",
+        "IHL proportionality"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Avoid All-Out War in Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22400.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What responsibility does — accept for the humanitarian consequences of military operations that cause mass cross-border displacement?",
+        "— What measures were taken to ensure that civilians had safe routes away from the fighting?"
+    ],
+
+    followUp:
+    "— Does — believe that the displacement of civilians into another State should be treated as a foreseeable consequence of military operations?"
+},
+
+{
+    id: 250,
+
+    title:
+    "Israeli attacks damage civilian housing and displace Lebanese families",
+
+    date:
+    "June 2025",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The United Nations reported that Israeli airstrikes in Lebanon destroyed residential buildings and damaged dozens of others, displacing hundreds of families.",
+
+    victims:
+    "Approximately 300 families were reportedly displaced after 115 housing units were destroyed.",
+
+    legalIssues:
+    [
+        "Protection of civilian objects",
+        "IHL distinction",
+        "IHL proportionality",
+        "Protection against displacement"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Daily Press Briefing on Lebanon",
+
+            url:
+            "https://press.un.org/en/2025/db250609.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What military objective justified the destruction of residential buildings?",
+        "— What measures did — take to prevent the displacement of approximately 300 families?"
+    ],
+
+    followUp:
+    "— Does — accept that the destruction of civilian homes after a ceasefire requires particularly serious legal scrutiny?"
+},
+
+{
+    id: 251,
+
+    title:
+    "Israeli strikes damage a school for people with disabilities in Lebanon",
+
+    date:
+    "June 2025",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The United Nations reported extensive damage from Israeli airstrikes, including damage to a school serving people with disabilities.",
+
+    victims:
+    "Students and people with disabilities relying on the facility were affected.",
+
+    legalIssues:
+    [
+        "Protection of civilian objects",
+        "Protection of persons with disabilities",
+        "IHL distinction",
+        "IHL proportionality"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Daily Press Briefing on Lebanon",
+
+            url:
+            "https://press.un.org/en/2025/db250609.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What evidence did — have that a school serving people with disabilities was being used for military purposes?",
+        "— What precautions were taken to protect vulnerable civilians using the facility?"
+    ],
+
+    followUp:
+    "— Does — accept that schools and facilities serving persons with disabilities receive special protection as civilian objects?"
+},
+
+{
+    id: 252,
+
+    title:
+    "Israeli strikes continue in Lebanon after cessation of hostilities",
+
+    date:
+    "2025",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "The United Nations reported continued Israeli military operations in Lebanon after the cessation of hostilities, including airstrikes and demolitions that continued to affect civilians and obstruct the safe return of displaced people.",
+
+    victims:
+    "Civilians remained displaced and humanitarian needs continued to increase.",
+
+    legalIssues:
+    [
+        "Cessation of hostilities",
+        "Protection of civilians",
+        "IHL",
+        "UN Security Council Resolution 1701"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Daily Press Briefing on Lebanon",
+
+            url:
+            "https://press.un.org/en/2025/db250609.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why did — continue military operations after the cessation of hostilities?",
+        "— How does — justify actions that prevent displaced civilians from safely returning home?"
+    ],
+
+    followUp:
+    "— Does — accept that the continuation of military operations after a ceasefire can undermine the entire purpose of a cessation of hostilities?"
+},
+
+{
+    id: 253,
+
+    title:
+    "Israeli military operations contribute to continued displacement along the Blue Line",
+
+    date:
+    "2025",
+
+    location:
+    "Southern Lebanon",
+
+    facts:
+    "The United Nations reported that ongoing Israeli military operations along the Blue Line continued to impede the safe return of displaced civilians and drive humanitarian needs.",
+
+    victims:
+    "More than 82,000 people remained displaced across Lebanon according to UN reporting at the time.",
+
+    legalIssues:
+    [
+        "Protection of civilians",
+        "Right of return to homes",
+        "IHL",
+        "UN Security Council Resolution 1701"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Daily Press Briefing on Lebanon",
+
+            url:
+            "https://press.un.org/en/2025/db250609.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— What legal justification does — provide for maintaining military activity that prevents civilians from returning home?",
+        "— What conditions does — believe must exist before displaced Lebanese civilians can safely return?"
+    ],
+
+    followUp:
+    "— Does — accept that military control over civilian areas cannot become a permanent substitute for a political settlement?"
+},
+
+{
+    id: 254,
+
+    title:
+    "Israeli attacks against Iran and its allies risk wider regional war",
+
+    date:
+    "2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The UN Secretary-General repeatedly warned that attacks involving Israel, Iran, Hezbollah and other regional actors risked pushing the Middle East toward a wider conflict. The killing of senior Iranian and Hezbollah figures and continued cross-border attacks contributed to the escalation.",
+
+    victims:
+    "Civilians across Iran, Lebanon, Israel, Syria and the wider region faced the risk of a broader war.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "State sovereignty",
+        "Principle of non-escalation"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Deadly Attacks in South Beirut and Tehran Represent Dangerous Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22322.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does — justify military actions that risked transforming a regional conflict into a wider war?",
+        "— What safeguards did — establish to prevent attacks on Iranian territory or Iranian personnel from triggering uncontrollable escalation?"
+    ],
+
+    followUp:
+    "— Does — accept that the legality of an individual strike cannot be separated entirely from the foreseeable risk of wider regional war?"
+},
+
+{
+    id: 255,
+
+    title:
+    "Israeli and Iranian escalation creates a cycle of direct retaliation",
+
+    date:
+    "2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The United Nations warned that the direct exchange of attacks between Iran and Israel represented a dangerous escalation. The sequence of attacks demonstrated how strikes against Iranian personnel and facilities could lead to Iranian retaliation and further military action.",
+
+    victims:
+    "Civilian populations throughout the Middle East faced increased risks from direct State-to-State escalation and attacks by allied armed groups.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "UN Charter Article 51",
+        "Self-defence",
+        "Proportionality",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "UN Secretary-General Calls for Maximum Restraint after Iran-Israel Escalation",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22272.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does — distinguish lawful self-defence from retaliation designed primarily to punish or deter another State?",
+        "— What mechanism does — support to prevent another cycle of attack and counterattack?"
+    ],
+
+    followUp:
+    "— Will — support a binding diplomatic mechanism to prevent future direct attacks between Iran and Israel?"
+},
+
+    {
+    id: 256,
+
+    title:
+    "Houthi missile attack damages the MV Laax",
+
+    date:
+    "29 May 2024",
+
+    location:
+    "Red Sea",
+
+    facts:
+    "The commercial vessel MV Laax was attacked by Houthi forces while transiting the Red Sea. The vessel was damaged and civilian seafarers were placed at risk during the attack.",
+
+    victims:
+    "Civilian seafarers and commercial shipping were exposed to an armed attack.",
+
+    legalIssues:
+    [
+        "Law of the Sea",
+        "Protection of civilian vessels",
+        "IHL distinction",
+        "Freedom of navigation"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council discussions on Houthi attacks against commercial shipping",
+
+            url:
+            "https://press.un.org/en/2024/sc15722.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why did Iran continue supporting the Houthis despite repeated attacks on civilian commercial vessels?",
+        "— What measures did Iran take to prevent further attacks against international shipping?"
+    ],
+
+    followUp:
+    "Does Iran accept that attacks against commercial vessels can create international responsibility and regional escalation?"
+},
+
+{
+    id: 257,
+
+    title:
+    "Houthi attack on the MV Verbena injures civilian seafarers",
+
+    date:
+    "13 June 2024",
+
+    location:
+    "Red Sea",
+
+    facts:
+    "The commercial vessel MV Verbena was attacked by Houthi forces. The attack caused serious damage to the vessel and injured civilian seafarers, demonstrating the continuing danger faced by merchant shipping in the region.",
+
+    victims:
+    "Civilian seafarers were injured and the commercial vessel was damaged.",
+
+    legalIssues:
+    [
+        "ICCPR Article 6",
+        "IHL protection of civilians",
+        "Law of the Sea",
+        "Protection of civilian objects"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council discussions on Red Sea attacks",
+
+            url:
+            "https://press.un.org/en/2024/sc15722.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran justify supporting a group whose attacks injured civilian seafarers?",
+        "— Does Iran condemn the attack on the MV Verbena?"
+    ],
+
+    followUp:
+    "Will Iran support an independent investigation into attacks against civilian merchant vessels?"
+},
+
+{
+    id: 258,
+
+    title:
+    "Houthi attack on the MV Tutor causes the vessel to sink",
+
+    date:
+    "12–18 June 2024",
+
+    location:
+    "Red Sea",
+
+    facts:
+    "The commercial vessel MV Tutor was attacked by Houthi forces and subsequently sank. The attack involved an unmanned surface vessel and missiles and resulted in the death of a civilian seafarer.",
+
+    victims:
+    "One civilian seafarer was killed and the vessel was destroyed.",
+
+    legalIssues:
+    [
+        "ICCPR Article 6",
+        "IHL distinction",
+        "Protection of civilian vessels",
+        "Law of the Sea"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council discussions on attacks against merchant vessels",
+
+            url:
+            "https://press.un.org/en/2024/sc15722.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why did Iran not prevent an attack by an allied group that killed a civilian sailor?",
+        "— Does Iran accept that the MV Tutor was a civilian commercial vessel?"
+    ],
+
+    followUp:
+    "Can Iran condemn the attack without qualification?"
+},
+
+{
+    id: 259,
+
+    title:
+    "Houthi attack on the MV Magic Seas forces crew evacuation",
+
+    date:
+    "6 July 2025",
+
+    location:
+    "Red Sea",
+
+    facts:
+    "The commercial vessel MV Magic Seas was attacked by Houthi forces and its crew was forced to abandon the vessel. The incident represented a continuation of attacks on commercial shipping in the Red Sea.",
+
+    victims:
+    "The civilian crew was forced to evacuate the vessel.",
+
+    legalIssues:
+    [
+        "Law of the Sea",
+        "Protection of civilian vessels",
+        "IHL distinction",
+        "Freedom of navigation"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "UN statements on attacks against commercial shipping in the Red Sea",
+
+            url:
+            "https://news.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Why should Iran's support for the Houthis not be questioned after another commercial vessel was attacked?",
+        "— What concrete action did Iran take to prevent attacks on civilian merchant ships?"
+    ],
+
+    followUp:
+    "Does Iran believe that commercial shipping should be used as a battlefield?"
+},
+
+{
+    id: 260,
+
+    title:
+    "Houthi attack sinks the MV Eternity C",
+
+    date:
+    "7 July 2025",
+
+    location:
+    "Red Sea",
+
+    facts:
+    "The commercial vessel MV Eternity C was attacked by Houthi forces and subsequently sank. The incident resulted in deaths and casualties among the civilian crew and represented a major escalation in attacks on merchant shipping.",
+
+    victims:
+    "Civilian crew members were killed, injured or forced to abandon the vessel.",
+
+    legalIssues:
+    [
+        "ICCPR Article 6",
+        "IHL protection of civilians",
+        "Law of the Sea",
+        "Protection of civilian objects"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "UN reporting on attacks against commercial shipping",
+
+            url:
+            "https://news.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran justify its relationship with a group responsible for attacks that kill civilian seafarers?",
+        "— Does Iran condemn the sinking of the MV Eternity C?"
+    ],
+
+    followUp:
+    "Will Iran accept responsibility for ensuring that weapons supplied to its allies are not used against civilian shipping?"
+},
+
+{
+    id: 261,
+
+    title:
+    "Hezbollah fires rockets toward northern Israeli communities",
+
+    date:
+    "October 2023 onward",
+
+    location:
+    "Israel–Lebanon border",
+
+    facts:
+    "Hezbollah conducted repeated rocket and missile attacks across the Blue Line following the outbreak of the Gaza war. The attacks affected communities in northern Israel and contributed to continued cross-border escalation.",
+
+    victims:
+    "Civilians on both sides of the border were killed, injured and displaced.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "Protection of civilians",
+        "UN Security Council Resolution 1701 (2006)",
+        "UN Security Council Resolution 1559 (2004)"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General reports on Lebanon and the Blue Line",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran continue supporting Hezbollah despite repeated cross-border attacks?",
+        "— Does Iran accept that Hezbollah's military activity violates the objectives of Resolution 1701?"
+    ],
+
+    followUp:
+    "If Iran supports Lebanese sovereignty, why does it support an armed group operating independently of the Lebanese State?"
+},
+
+{
+    id: 262,
+
+    title:
+    "Hezbollah launches anti-tank missiles toward Israeli communities",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Northern Israel",
+
+    facts:
+    "Hezbollah used anti-tank missiles and other weapons in attacks across the Israel–Lebanon border. Some attacks struck or endangered areas containing civilian populations.",
+
+    victims:
+    "Civilians and communities near the border were exposed to missile attacks.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "Protection of civilians",
+        "UN Security Council Resolution 1701",
+        "IHL precautions in attack"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Report on implementation of Security Council Resolution 1701",
+
+            url:
+            "https://digitallibrary.un.org/"
+        }
+    ],
+
+    pois:
+    [
+        "— What military targets justified the use of anti-tank missiles near civilian communities?",
+        "— What controls does Iran impose over the weapons supplied to Hezbollah?"
+    ],
+
+    followUp:
+    "Does Iran accept that the use of weapons near civilian populations creates obligations under IHL?"
+},
+
+{
+    id: 263,
+
+    title:
+    "Hezbollah drone attacks increase cross-border escalation",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Israel–Lebanon border",
+
+    facts:
+    "Hezbollah used unmanned aerial vehicles in attacks against targets across the Blue Line. The continued use of drones increased the risk of escalation between Israel and Lebanon.",
+
+    victims:
+    "Civilians and military personnel were exposed to drone attacks and the resulting escalation.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "Protection of civilians",
+        "UN Security Council Resolution 1701",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Report on the implementation of Resolution 1701",
+
+            url:
+            "https://digitallibrary.un.org/"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran continue providing military support for Hezbollah's drone capabilities?",
+        "— What safeguards exist to ensure that drones are not used against civilian targets?"
+    ],
+
+    followUp:
+    "Does Iran accept that the proliferation of armed drones increases the risk of uncontrolled escalation?"
+},
+
+{
+    id: 264,
+
+    title:
+    "Hezbollah attacks cause mass displacement along the Israel–Lebanon border",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Israel and Lebanon",
+
+    facts:
+    "The continued exchange of fire between Hezbollah and Israel caused large-scale displacement of civilians on both sides of the Blue Line.",
+
+    victims:
+    "Tens of thousands of civilians were displaced from their homes.",
+
+    legalIssues:
+    [
+        "Protection of civilians",
+        "Protection against forced displacement",
+        "IHL",
+        "UN Security Council Resolution 1701"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "UN reporting on displacement along the Blue Line",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22260.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why should civilians be displaced because Iran's ally Hezbollah continues armed operations?",
+        "— Does Iran accept any responsibility for the humanitarian consequences of Hezbollah's actions?"
+    ],
+
+    followUp:
+    "What alternative diplomatic solution has Iran proposed to replace continued armed confrontation?"
+},
+
+{
+    id: 265,
+
+    title:
+    "Hezbollah attacks contribute to civilian deaths in northern Israel",
+
+    date:
+    "October 2023–2024",
+
+    location:
+    "Northern Israel",
+
+    facts:
+    "United Nations reporting documented deaths and injuries resulting from continued exchanges of fire between Hezbollah and Israel.",
+
+    victims:
+    "Civilians and military personnel were killed and injured.",
+
+    legalIssues:
+    [
+        "ICCPR Article 6",
+        "IHL distinction",
+        "Protection of civilians"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Secretary-General reporting on Lebanon and Israel",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22400.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran condemn Hezbollah attacks that kill civilians?",
+        "— Why should Iran's support for Hezbollah not be examined after repeated civilian deaths?"
+    ],
+
+    followUp:
+    "Will Iran support independent investigations into civilian deaths caused by Hezbollah attacks?"
+},
+
+{
+    id: 266,
+
+    title:
+    "Hezbollah fires rockets toward Haifa",
+
+    date:
+    "October 2024",
+
+    location:
+    "Northern Israel",
+
+    facts:
+    "Hezbollah launched rocket attacks toward the Haifa area. The attacks exposed a major civilian population centre to rocket fire.",
+
+    victims:
+    "Civilians in and around Haifa were exposed to rocket attacks and some were injured.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "IHL precautions in attack",
+        "Protection of civilians",
+        "UN Security Council Resolution 1701"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "S/2024/721",
+
+            url:
+            "https://digitallibrary.un.org/record/4063563/files/S_2024_721-EN.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— What specific military target justified rocket fire toward an area containing civilians?",
+        "— How does Iran ensure that Hezbollah's weapons are not used indiscriminately?"
+    ],
+
+    followUp:
+    "Does Iran accept that firing rockets toward populated areas creates a serious distinction issue under IHL?"
+},
+
+{
+    id: 267,
+
+    title:
+    "Hezbollah launches rockets toward the Tel Aviv metropolitan area",
+
+    date:
+    "October 2024",
+
+    location:
+    "Israel",
+
+    facts:
+    "Hezbollah launched rockets toward the Tel Aviv metropolitan area during a period of heightened regional escalation.",
+
+    victims:
+    "A major civilian metropolitan area was exposed to rocket attacks.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "IHL proportionality",
+        "Protection of civilians",
+        "UN Security Council Resolution 1701"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "S/2024/721",
+
+            url:
+            "https://digitallibrary.un.org/record/4063563/files/S_2024_721-EN.pdf"
+        }
+    ],
+
+    pois:
+    [
+        "— What military objective justified firing rockets toward the Tel Aviv metropolitan area?",
+        "— Why should Iran not be held politically responsible for weapons capabilities provided to Hezbollah?"
+    ],
+
+    followUp:
+    "Does Iran accept that firing unguided rockets toward densely populated areas can violate IHL?"
+},
+
+{
+    id: 268,
+
+    title:
+    "Iran-backed militias attack US personnel in Iraq and Syria",
+
+    date:
+    "October 2023 onward",
+
+    location:
+    "Iraq and Syria",
+
+    facts:
+    "Following the outbreak of the Gaza war, Iran-backed militia groups conducted repeated attacks against U.S. personnel and facilities in Iraq and Syria.",
+
+    victims:
+    "Military personnel were killed and injured in attacks attributed by the United States to Iran-backed groups.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "State responsibility for aid or assistance"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United States Department of Defense",
+
+            title:
+            "Pentagon briefing on attacks against US forces",
+
+            url:
+            "https://www.defense.gov/News/Transcripts/Transcript/Article/3667341/pentagon-press-secretary-air-force-maj-gen-pat-ryder-holds-a-press-briefing/"
+        }
+    ],
+
+    pois:
+    [
+        "— Why did Iran-backed groups attack foreign military personnel in Iraq and Syria over a conflict occurring elsewhere?",
+        "— Does Iran accept responsibility for groups it funds, trains or equips?"
+    ],
+
+    followUp:
+    "Does Iran believe its support for these groups reduces or increases regional instability?"
+},
+
+{
+    id: 269,
+
+    title:
+    "Iran-backed militias launch repeated attacks against US bases",
+
+    date:
+    "October–December 2023",
+
+    location:
+    "Iraq and Syria",
+
+    facts:
+    "U.S. authorities reported numerous attacks by Iran-backed militia groups against U.S. facilities and personnel following the outbreak of the Gaza conflict.",
+
+    victims:
+    "Military personnel were injured and facilities were damaged.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "Potential State responsibility"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United States Department of Defense",
+
+            title:
+            "Pentagon briefings on attacks against US forces",
+
+            url:
+            "https://www.defense.gov/News/Transcripts/"
+        }
+    ],
+
+    pois:
+    [
+        "— What action did Iran take to stop repeated attacks by its allied militias?",
+        "— If Iran claims these groups act independently, why does it continue supporting them?"
+    ],
+
+    followUp:
+    "Does Iran believe that political influence over an armed group creates an obligation to prevent foreseeable attacks?"
+},
+
+{
+    id: 270,
+
+    title:
+    "Attack on Tower 22 kills three US service members",
+
+    date:
+    "28 January 2024",
+
+    location:
+    "Jordan",
+
+    facts:
+    "A drone attack on the U.S. facility known as Tower 22 killed three U.S. service members and injured others. The United States attributed the attack to an Iran-backed militia group.",
+
+    victims:
+    "Three U.S. service members were killed and others were injured.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "Potential State responsibility for support to armed groups"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United States Department of Defense",
+
+            title:
+            "Pentagon briefing on Tower 22 attack",
+
+            url:
+            "https://www.defense.gov/News/Transcripts/Transcript/Article/3667341/pentagon-press-secretary-air-force-maj-gen-pat-ryder-holds-a-press-briefing/"
+        }
+    ],
+
+    pois:
+    [
+        "— What concrete action did Iran take to prevent the attack that killed three U.S. service members?",
+        "— Does Iran accept any responsibility for the actions of the group accused of conducting the attack?"
+    ],
+
+    followUp:
+    "Does Iran accept that proxy warfare can produce consequences that directly threaten international peace and security?"
+},
+
+{
+    id: 271,
+
+    title:
+    "US strikes Iranian-linked facilities following Tower 22 attack",
+
+    date:
+    "2 February 2024",
+
+    location:
+    "Iraq and Syria",
+
+    facts:
+    "The United States conducted strikes against facilities it said were used by Iran's Islamic Revolutionary Guard Corps and affiliated militias following the attack that killed three U.S. service members.",
+
+    victims:
+    "Personnel at the targeted facilities were reportedly killed or injured.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "IHL distinction",
+        "IHL proportionality",
+        "State responsibility"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United States Department of Defense",
+
+            title:
+            "US military response to attacks against US forces",
+
+            url:
+            "https://www.defense.gov/News/Transcripts/Transcript/Article/3667341/pentagon-press-secretary-air-force-maj-gen-pat-ryder-holds-a-press-briefing/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that its support for armed groups contributed to the chain of events leading to further regional escalation?",
+        "— What safeguards did Iran use to prevent allied groups from launching attacks that could trigger wider conflict?"
+    ],
+
+    followUp:
+    "Does Iran believe that proxy warfare actually prevents escalation?"
+},
+
+{
+    id: 272,
+
+    title:
+    "Iran-backed groups threaten US forces across multiple countries",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq, Syria and Jordan",
+
+    facts:
+    "Iran-backed armed groups operated across several countries and conducted attacks against U.S. personnel and facilities, creating a multi-country security crisis.",
+
+    victims:
+    "Military personnel and civilian populations near military facilities were placed at risk.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "State responsibility"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United States Department of Defense",
+
+            title:
+            "US Department of Defense statements on regional attacks",
+
+            url:
+            "https://www.defense.gov/News/"
+        }
+    ],
+
+    pois:
+    [
+        "— How can Iran claim to support regional stability while allied groups conduct attacks across multiple States?",
+        "— Does Iran accept that its network of armed partners internationalizes local conflicts?"
+    ],
+
+    followUp:
+    "What legal limit does Iran recognize on the support a State may provide to non-State armed groups?"
+},
+
+{
+    id: 273,
+
+    title:
+    "Iran-backed militia attacks contribute to US–Iran escalation",
+
+    date:
+    "January–February 2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Attacks attributed to Iran-backed groups led to direct military responses by the United States, increasing the risk of a broader confrontation involving Iran and regional actors.",
+
+    victims:
+    "Military personnel and civilians faced increased risks from regional escalation.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "State responsibility"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional escalation",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that its support for armed groups can create foreseeable escalation between States?",
+        "— What mechanism exists to prevent Iran-backed groups from independently triggering a wider war?"
+    ],
+
+    followUp:
+    "If Iran cannot control its allies, why does it continue supplying them with advanced weapons?"
+},
+
+{
+    id: 274,
+
+    title:
+    "Houthi attacks threaten humanitarian access to Yemen",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Red Sea and Yemen",
+
+    facts:
+    "The United Nations warned that attacks against Red Sea shipping threatened humanitarian operations and the delivery of assistance to vulnerable populations in Yemen.",
+
+    victims:
+    "Millions of civilians dependent on humanitarian assistance faced indirect risks.",
+
+    legalIssues:
+    [
+        "Protection of humanitarian operations",
+        "IHL",
+        "Freedom of navigation",
+        "Protection of civilians"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council briefing on Red Sea attacks",
+
+            url:
+            "https://press.un.org/en/2024/sc15552.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why should humanitarian operations serving civilians be endangered by attacks from a group supported by Iran?",
+        "— What did Iran do to ensure that its ally would not obstruct humanitarian assistance?"
+    ],
+
+    followUp:
+    "Does Iran accept that political warfare cannot come at the expense of humanitarian access?"
+},
+
+{
+    id: 275,
+
+    title:
+    "Houthi attacks force commercial ships to reroute around Africa",
+
+    date:
+    "Late 2023–2024",
+
+    location:
+    "Red Sea and Gulf of Aden",
+
+    facts:
+    "Repeated Houthi attacks caused major shipping companies to avoid the Red Sea and reroute vessels around the Cape of Good Hope, increasing journey times and costs.",
+
+    victims:
+    "International shipping companies, civilian crews and global supply chains were affected.",
+
+    legalIssues:
+    [
+        "Freedom of navigation",
+        "Law of the Sea",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "UN Security Council discussions on Red Sea shipping",
+
+            url:
+            "https://press.un.org/en/2024/sc15561.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why should global commerce be disrupted because of actions by a group supported by Iran?",
+        "— Does Iran accept that the economic consequences of Houthi attacks extend far beyond the Middle East?"
+    ],
+
+    followUp:
+    "Does Iran believe that attacks on international shipping are a legitimate tool of political pressure?"
+},
+
+{
+    id: 276,
+
+    title:
+    "Security Council Resolution 2722 demands an end to Houthi attacks",
+
+    date:
+    "10 January 2024",
+
+    location:
+    "United Nations Security Council",
+
+    facts:
+    "The Security Council adopted Resolution 2722 demanding that the Houthis immediately cease attacks against merchant and commercial vessels and release the Galaxy Leader and its crew.",
+
+    victims:
+    "Commercial vessels and civilian crews were directly affected by the attacks addressed by the resolution.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 2722 (2024)",
+        "Freedom of navigation",
+        "Law of the Sea",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council Demands Houthis Immediately Stop Attacks on Merchant Vessels",
+
+            url:
+            "https://press.un.org/en/2024/sc15561.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why did Iran not use its influence to ensure that the Houthis complied with the Security Council's demand?",
+        "— Does Iran condemn the Houthis' continued attacks despite Resolution 2722?"
+    ],
+
+    followUp:
+    "If Iran claims to respect the UN Charter, will it support full compliance with Resolution 2722?"
+},
+
+{
+    id: 277,
+
+    title:
+    "Security Council Resolution 2739 again demands that Houthis stop attacks",
+
+    date:
+    "27 June 2024",
+
+    location:
+    "United Nations Security Council",
+
+    facts:
+    "The Security Council adopted Resolution 2739, again demanding that the Houthis immediately cease attacks against merchant and commercial vessels and release the Galaxy Leader and its crew.",
+
+    victims:
+    "Commercial shipping and civilian crews continued to face threats despite repeated Security Council demands.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 2739 (2024)",
+        "Freedom of navigation",
+        "Law of the Sea"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council adopts Resolution 2739",
+
+            url:
+            "https://press.un.org/en/2024/sc15750.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why did Houthi attacks continue despite repeated Security Council demands?",
+        "— What responsibility does Iran accept for supporting a group that repeatedly disregards Security Council demands?"
+    ],
+
+    followUp:
+    "Does Iran believe political alliances allow armed groups to ignore Security Council decisions?"
+},
+
+{
+    id: 278,
+
+    title:
+    "Galaxy Leader crew remains detained by Houthi forces",
+
+    date:
+    "November 2023 onward",
+
+    location:
+    "Yemen",
+
+    facts:
+    "The Houthi seizure of the Galaxy Leader resulted in the detention of its civilian crew. The Security Council demanded the release of the vessel and its crew.",
+
+    victims:
+    "Civilian crew members were detained for an extended period.",
+
+    legalIssues:
+    [
+        "Protection against arbitrary detention",
+        "ICCPR Article 9",
+        "Law of the Sea",
+        "UN Security Council Resolution 2722"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council statements on the Galaxy Leader",
+
+            url:
+            "https://press.un.org/en/2024/sc15904.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why did Iran not use its influence to secure the immediate release of the civilian crew?",
+        "— Does Iran consider the continued detention of civilian sailors lawful?"
+    ],
+
+    followUp:
+    "Will Iran publicly demand the immediate and unconditional release of all detained civilian crew members?"
+},
+
+{
+    id: 279,
+
+    title:
+    "Houthi attacks place international naval forces in direct confrontation",
+
+    date:
+    "December 2023–2024",
+
+    location:
+    "Red Sea",
+
+    facts:
+    "Houthi attacks on commercial vessels led to repeated confrontations with international naval forces attempting to protect maritime navigation.",
+
+    victims:
+    "Civilian sailors and naval personnel were exposed to the risk of direct military escalation.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "Law of the Sea",
+        "IHL",
+        "UN Charter"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council briefing on Red Sea attacks",
+
+            url:
+            "https://press.un.org/en/2024/sc15552.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that supporting attacks on commercial shipping creates a risk of direct conflict between States?",
+        "— What steps did Iran take to prevent its ally from attacking international naval forces?"
+    ],
+
+    followUp:
+    "Does Iran's proxy strategy make regional war more likely rather than less likely?"
+},
+
+{
+    id: 280,
+
+    title:
+    "Houthi attacks create environmental risks from damaged vessels",
+
+    date:
+    "2024",
+
+    location:
+    "Red Sea",
+
+    facts:
+    "Attacks that damaged or sank commercial vessels created risks of fuel spills, hazardous cargo and other environmental consequences in the Red Sea.",
+
+    victims:
+    "The marine environment, coastal populations and civilian maritime traffic faced risks.",
+
+    legalIssues:
+    [
+        "Law of the Sea",
+        "Protection of the marine environment",
+        "International environmental obligations"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "UN reporting on environmental risks from Red Sea attacks",
+
+            url:
+            "https://news.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Why should the marine environment be endangered by attacks conducted by an Iranian-supported armed group?",
+        "— Does Iran accept any responsibility for preventing foreseeable environmental harm caused by its allies?"
+    ],
+
+    followUp:
+    "Will Iran support international mechanisms to investigate environmental damage caused by attacks on commercial shipping?"
+},
+
+{
+    id: 281,
+
+    title:
+    "Iranian support for Hezbollah is raised in UN reporting on Lebanon",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Lebanon",
+
+    facts:
+    "UN reporting and Security Council discussions repeatedly addressed the presence of weapons and armed capabilities held by non-State actors in Lebanon, including Hezbollah, and the broader regional support networks connected to the group.",
+
+    victims:
+    "Lebanese civilians and populations across the region faced risks from continued armed escalation.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 1559",
+        "UN Security Council Resolution 1701",
+        "State sovereignty",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council reporting on Lebanon",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran support an armed organization whose military capacity operates outside the control of the Lebanese State?",
+        "— Does Iran accept the requirement that weapons in Lebanon should be held only by the State?"
+    ],
+
+    followUp:
+    "How does Iran reconcile support for Hezbollah with respect for Lebanese sovereignty?"
+},
+
+{
+    id: 282,
+
+    title:
+    "Hezbollah's continued armed presence challenges Resolution 1701",
+
+    date:
+    "2006–2024",
+
+    location:
+    "Southern Lebanon",
+
+    facts:
+    "UN Security Council Resolution 1701 called for an area free of armed personnel, assets and weapons other than those of the Lebanese Government and UNIFIL between the Blue Line and the Litani River. Hezbollah continued to maintain significant military capabilities in Lebanon.",
+
+    victims:
+    "Civilian populations in southern Lebanon and northern Israel remained exposed to the risk of renewed conflict.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 1701",
+        "UN Security Council Resolution 1559",
+        "State sovereignty"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Resolution 1701 (2006)",
+
+            url:
+            "https://digitallibrary.un.org/record/581830"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran support Hezbollah's military presence despite Resolution 1701?",
+        "— Does Iran accept that Hezbollah's weapons should be removed from areas covered by Resolution 1701?"
+    ],
+
+    followUp:
+    "Will Iran support the full implementation of Resolution 1701?"
+},
+
+{
+    id: 283,
+
+    title:
+    "Hezbollah's military capabilities contribute to repeated border escalation",
+
+    date:
+    "2006–2024",
+
+    location:
+    "Lebanon–Israel border",
+
+    facts:
+    "Hezbollah's possession of rockets, missiles, drones and other weapons has allowed it to conduct sustained military operations across the Israel–Lebanon border.",
+
+    victims:
+    "Civilians on both sides of the border have faced deaths, injuries and displacement.",
+
+    legalIssues:
+    [
+        "UN Security Council Resolution 1701",
+        "IHL distinction",
+        "Protection of civilians"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "UN reporting on the implementation of Resolution 1701",
+
+            url:
+            "https://digitallibrary.un.org/"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran continue supplying military capabilities that enable repeated border escalation?",
+        "— What limits does Iran place on Hezbollah's use of Iranian-supplied weapons?"
+    ],
+
+    followUp:
+    "Does Iran accept that continued weapons transfers can make future conflict more likely?"
+},
+
+{
+    id: 284,
+
+    title:
+    "Iran-backed armed groups operate across multiple conflict zones",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Lebanon, Yemen, Iraq and Syria",
+
+    facts:
+    "Iran maintained relationships with multiple armed groups across the Middle East, including Hezbollah, the Houthis and Iran-backed militias operating in Iraq and Syria.",
+
+    victims:
+    "Civilians and military personnel across multiple countries were affected by conflicts involving these groups.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "Potential State responsibility",
+        "State sovereignty"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional escalation",
+
+            url:
+            "https://press.un.org/en/2024/sgsm22386.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— How can Iran claim to be a force for regional stability while supporting armed groups across multiple States?",
+        "— Does Iran accept that its network of armed partners contributes to the internationalization of regional conflicts?"
+    ],
+
+    followUp:
+    "What is the legal difference between a defensive alliance and sustained support for non-State armed groups conducting cross-border attacks?"
+},
+
+{
+    id: 285,
+
+    title:
+    "Iran-backed groups create multiple simultaneous fronts after October 2023",
+
+    date:
+    "October 2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Following the outbreak of the Gaza war, armed groups aligned with Iran became involved in hostilities across multiple theatres, including the Red Sea, Lebanon, Iraq and Syria.",
+
+    victims:
+    "Civilians, military personnel and commercial sailors were affected across multiple conflict zones.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "UN Charter",
+        "IHL",
+        "Potential State responsibility"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional escalation",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that its network of allies helped expand the Gaza conflict into a wider regional crisis?",
+        "— What steps did Iran take to prevent the opening of additional fronts?"
+    ],
+
+    followUp:
+    "If Iran wanted to prevent regional war, why did it continue supporting armed groups conducting attacks on multiple fronts?"
+},
+
+{
+    id: 286,
+
+    title:
+    "Iran-backed groups use drones as a regional military tool",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iranian-aligned armed groups used drones and unmanned systems in attacks across several regional theatres, including against shipping, military facilities and other targets.",
+
+    victims:
+    "Civilian populations, military personnel and commercial crews were exposed to drone attacks.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "Protection of civilians",
+        "International peace and security",
+        "State responsibility"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional drone attacks",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— What controls does Iran impose on the transfer of drones and drone technology to allied armed groups?",
+        "— Does Iran accept responsibility for foreseeable civilian harm caused by weapons it supplies?"
+    ],
+
+    followUp:
+    "Will Iran support international monitoring of weapons transfers to non-State armed groups?"
+},
+
+{
+    id: 287,
+
+    title:
+    "Iran-backed groups use ballistic and cruise missile capabilities across the region",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Armed groups aligned with Iran possessed and used increasingly advanced missile systems across several conflict zones.",
+
+    victims:
+    "Civilians, military personnel and commercial shipping were exposed to long-range missile attacks.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "Protection of civilians",
+        "International peace and security",
+        "Arms transfer concerns"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council reporting on regional armed groups",
+
+            url:
+            "https://digitallibrary.un.org/"
+        }
+    ],
+
+    pois:
+    [
+        "— What safeguards does Iran impose on the transfer of advanced missile technology to armed groups?",
+        "— Does Iran accept that advanced weapons can create foreseeable risks to civilians?"
+    ],
+
+    followUp:
+    "Will Iran support greater transparency regarding military assistance to non-State armed groups?"
+},
+
+{
+    id: 288,
+
+    title:
+    "Iran's support for armed groups becomes a central issue in regional escalation",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The actions of Iran-aligned armed groups became a major factor in discussions regarding the expansion of regional hostilities beyond the Israel–Gaza theatre.",
+
+    victims:
+    "Civilians, military personnel and international commercial operators were affected by the expansion of hostilities.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "UN Charter",
+        "State responsibility",
+        "IHL"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional escalation",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that its support for armed groups contributed to the expansion of the conflict?",
+        "— What evidence can Iran provide that its regional network is defensive rather than escalatory?"
+    ],
+
+    followUp:
+    "Can Iran identify a single case where it successfully prevented an allied group from escalating a conflict?"
+},
+
+{
+    id: 289,
+
+    title:
+    "Iran-backed militias operate in Iraq despite concerns over State authority",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq",
+
+    facts:
+    "Multiple armed groups aligned with Iran operated within Iraq's security environment while maintaining military capabilities and independent structures.",
+
+    victims:
+    "Iraqi civilians and foreign personnel faced risks from the presence and activities of armed groups outside full State control.",
+
+    legalIssues:
+    [
+        "State sovereignty",
+        "UN Charter",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Assistance Mission for Iraq",
+
+            title:
+            "UN reporting on Iraq",
+
+            url:
+            "https://iraq.un.org/"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran support armed groups whose military capabilities may operate outside the complete control of the Iraqi State?",
+        "— Does Iran support the monopoly of force by the Iraqi Government?"
+    ],
+
+    followUp:
+    "Will Iran support the full integration of all armed groups into legitimate State security structures?"
+},
+
+{
+    id: 290,
+
+    title:
+    "Iran-backed groups in Syria contribute to regional military escalation",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Syria",
+
+    facts:
+    "Iran-backed armed groups maintained military infrastructure and conducted or supported operations in the broader Syrian theatre, contributing to continuing regional tensions.",
+
+    victims:
+    "Civilians and military personnel were exposed to further escalation.",
+
+    legalIssues:
+    [
+        "State sovereignty",
+        "UN Charter",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "UN Security Council discussions on Syria",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— What legal basis does Iran claim for maintaining armed groups in Syria?",
+        "— Does Iran accept that foreign-backed armed groups can undermine Syrian sovereignty?"
+    ],
+
+    followUp:
+    "Will Iran support the withdrawal of unauthorized foreign armed formations from Syria?"
+},
+
+{
+    id: 291,
+
+    title:
+    "Iran's regional partners operate independently while receiving Iranian support",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran has frequently described allied armed groups as independent actors, while opponents argue that Iranian funding, training and weapons create substantial influence over their capabilities and operations.",
+
+    victims:
+    "Civilians and military personnel across multiple conflict zones were affected by the actions of these groups.",
+
+    legalIssues:
+    [
+        "State responsibility",
+        "Aid or assistance to armed groups",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional armed groups",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— If Iran claims these groups are fully independent, why does it continue providing them with weapons and training?",
+        "— If Iran has no influence over these groups, why does it maintain such extensive relationships with them?"
+    ],
+
+    followUp:
+    "How does Iran distinguish between political support and material support that may create legal consequences?"
+},
+
+{
+    id: 292,
+
+    title:
+    "Iran's opponents argue that weapons transfers create foreseeable risks",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran's opponents argue that sustained transfers of weapons, training and military technology to armed groups make subsequent misuse of those capabilities foreseeable.",
+
+    victims:
+    "Civilians, military personnel and commercial shipping were affected by attacks involving armed groups supported by Iran.",
+
+    legalIssues:
+    [
+        "State responsibility",
+        "Aid or assistance",
+        "IHL",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on armed-group support",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that foreseeable consequences of weapons transfers should create responsibility?",
+        "— What due diligence does Iran perform before supplying weapons to allied armed groups?"
+    ],
+
+    followUp:
+    "Will Iran support a transparent system for monitoring weapons supplied to non-State armed groups?"
+},
+
+{
+    id: 293,
+
+    title:
+    "Iran's regional alliances complicate attribution of armed attacks",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The use of non-State armed groups by multiple regional actors creates difficulties in determining whether attacks are solely the responsibility of the armed group or whether supporting States may also bear responsibility.",
+
+    victims:
+    "Civilians and military personnel were affected by attacks conducted by non-State armed groups.",
+
+    legalIssues:
+    [
+        "State responsibility",
+        "Attribution",
+        "Aid or assistance",
+        "IHL"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional escalation",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran believe that a State can avoid all responsibility simply by acting through a non-State armed group?",
+        "— What level of control does Iran believe is necessary before State responsibility can arise?"
+    ],
+
+    followUp:
+    "Will Iran support independent investigations into the relationship between States and armed groups?"
+},
+
+{
+    id: 294,
+
+    title:
+    "Iran's opponents accuse it of using proxy warfare to avoid direct confrontation",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran's opponents argue that Iran uses allied armed groups to project military power while maintaining political distance from individual attacks.",
+
+    victims:
+    "Civilians and military personnel across several conflict zones were affected by attacks conducted by Iran-aligned groups.",
+
+    legalIssues:
+    [
+        "State responsibility",
+        "International peace and security",
+        "UN Charter"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional tensions",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Is Iran using proxy groups to conduct military operations it would not conduct directly?",
+        "— If Iran denies responsibility for individual attacks, why does it continue supplying the groups conducting them?"
+    ],
+
+    followUp:
+    "Does Iran believe indirect warfare should be treated differently from direct State military action?"
+},
+
+{
+    id: 295,
+
+    title:
+    "Iran's opponents accuse its allies of creating a regional escalation network",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran's opponents argue that the simultaneous activity of armed groups in Lebanon, Yemen, Iraq and Syria created a connected regional security crisis.",
+
+    victims:
+    "Civilians, military personnel, commercial sailors and humanitarian operations were affected across multiple countries.",
+
+    legalIssues:
+    [
+        "International peace and security",
+        "UN Charter",
+        "State responsibility"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional escalation",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that its network of allies contributed to the regionalization of the conflict?",
+        "— What evidence does Iran have that these groups are not coordinated as part of a wider military strategy?"
+    ],
+
+    followUp:
+    "Will Iran support a regional mechanism to prevent allied armed groups from opening new fronts?"
+},
+
+{
+    id: 296,
+
+    title:
+    "Iran's opponents challenge the claim that allied groups are fully independent",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran has often stated that allied armed groups make their own decisions. Opponents argue that Iran's military, financial and technological support demonstrates significant strategic influence.",
+
+    victims:
+    "Populations affected by attacks involving Iran-aligned groups faced continued insecurity.",
+
+    legalIssues:
+    [
+        "State responsibility",
+        "Aid or assistance",
+        "Attribution"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on armed groups",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— What is the practical difference between an independent partner and a group receiving weapons, training and funding from Iran?",
+        "— Does Iran deny having any operational influence over its allied groups?"
+    ],
+
+    followUp:
+    "Will Iran allow independent monitoring of its military support to regional armed groups?"
+},
+
+{
+    id: 297,
+
+    title:
+    "Iran-backed groups challenge the authority of recognized governments",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Lebanon, Yemen, Iraq and Syria",
+
+    facts:
+    "Armed groups receiving Iranian support maintained military capabilities that often operated alongside or outside the formal structures of recognized national governments.",
+
+    victims:
+    "Civilians faced insecurity and weakened State authority in affected areas.",
+
+    legalIssues:
+    [
+        "State sovereignty",
+        "UN Charter",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "UN reporting on regional armed groups",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran support the principle that only recognized governments should maintain military force within their territory?",
+        "— Why does Iran support armed groups that possess independent military capabilities?"
+    ],
+
+    followUp:
+    "Will Iran support the disarmament or integration of armed groups operating outside State control?"
+},
+
+{
+    id: 298,
+
+    title:
+    "Iran-backed groups create risks for international maritime commerce",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Red Sea and Gulf of Aden",
+
+    facts:
+    "Houthi attacks against commercial shipping affected vessels connected to numerous countries and created risks for international maritime commerce.",
+
+    victims:
+    "Civilian sailors, shipping companies and global supply chains were affected.",
+
+    legalIssues:
+    [
+        "Law of the Sea",
+        "Freedom of navigation",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations Security Council",
+
+            title:
+            "Security Council demands Houthis stop attacks on merchant vessels",
+
+            url:
+            "https://press.un.org/en/2024/sc15561.doc.htm"
+        }
+    ],
+
+    pois:
+    [
+        "— Why should international trade be placed at risk by a group receiving Iranian support?",
+        "— Does Iran accept that its support for regional armed groups has consequences for States uninvolved in the conflict?"
+    ],
+
+    followUp:
+    "Will Iran support international guarantees for the protection of civilian maritime commerce?"
+},
+
+{
+    id: 299,
+
+    title:
+    "Iran-backed armed groups increase the risk of attacks on foreign forces",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Iraq, Syria and Jordan",
+
+    facts:
+    "Iran-backed militias conducted attacks against foreign military personnel and facilities, creating a risk of direct confrontation between States.",
+
+    victims:
+    "Foreign military personnel were killed and injured.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International peace and security",
+        "State responsibility"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United States Department of Defense",
+
+            title:
+            "US Department of Defense statements on regional attacks",
+
+            url:
+            "https://www.defense.gov/News/"
+        }
+    ],
+
+    pois:
+    [
+        "— What action did Iran take to prevent attacks against foreign military personnel by groups it supports?",
+        "— Does Iran accept that these attacks can trigger direct interstate conflict?"
+    ],
+
+    followUp:
+    "If Iran claims to oppose regional war, why does it continue supporting groups capable of triggering one?"
+},
+
+{
+    id: 300,
+
+    title:
+    "Iran's regional support network creates competing claims of responsibility",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran's opponents argue that the use of allied armed groups allows Iran to benefit strategically from their actions while denying direct responsibility for individual attacks.",
+
+    victims:
+    "Civilians and military personnel across multiple conflict zones were affected.",
+
+    legalIssues:
+    [
+        "State responsibility",
+        "Attribution",
+        "Aid or assistance",
+        "UN Charter"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional armed groups",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran believe a State can benefit from an armed group's actions while denying responsibility for all consequences?",
+        "— What circumstances would Iran accept as sufficient to establish State responsibility?"
+    ],
+
+    followUp:
+    "Will Iran support international legal investigations into State support for non-State armed groups?"
+},
+
+{
+    id: 301,
+
+    title:
+    "Iran-backed groups contribute to the spread of armed drone warfare",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Armed drones became increasingly prominent in attacks conducted by Iran-aligned groups across several regional theatres.",
+
+    victims:
+    "Civilians, military personnel and commercial shipping were exposed to attacks involving unmanned systems.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "Protection of civilians",
+        "Arms transfers",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on unmanned systems and regional attacks",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— What safeguards does Iran apply before transferring drone technology to armed groups?",
+        "— Does Iran accept that the proliferation of armed drones increases risks to civilians?"
+    ],
+
+    followUp:
+    "Will Iran support international standards governing the transfer of armed drone technology?"
+},
+
+{
+    id: 302,
+
+    title:
+    "Iran-backed groups contribute to the spread of long-range missile warfare",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran-aligned armed groups demonstrated the ability to conduct attacks at significant distances using missiles, drones and other advanced weapons systems.",
+
+    victims:
+    "Civilian populations and commercial shipping were exposed to attacks from increasingly advanced weapons.",
+
+    legalIssues:
+    [
+        "IHL distinction",
+        "Protection of civilians",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council reporting on regional missile and drone capabilities",
+
+            url:
+            "https://digitallibrary.un.org/"
+        }
+    ],
+
+    pois:
+    [
+        "— Why does Iran provide advanced military capabilities to non-State armed groups?",
+        "— What safeguards ensure that these weapons are not used against civilians?"
+    ],
+
+    followUp:
+    "Does Iran accept that the transfer of advanced weapons to armed groups increases regional instability?"
+},
+
+{
+    id: 303,
+
+    title:
+    "Iran's opponents argue that proxy warfare undermines accountability",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "The use of armed groups as strategic partners creates difficulties in identifying responsibility for attacks and obtaining accountability for civilian harm.",
+
+    victims:
+    "Victims of attacks by armed groups may face difficulty obtaining accountability or reparations.",
+
+    legalIssues:
+    [
+        "State responsibility",
+        "Accountability",
+        "IHL",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "UN discussions on accountability and armed groups",
+
+            url:
+            "https://www.ohchr.org/"
+        }
+    ],
+
+    pois:
+    [
+        "— Does Iran accept that supporting armed groups can make accountability for civilian harm more difficult?",
+        "— Will Iran support investigations into attacks conducted by groups receiving Iranian support?"
+    ],
+
+    followUp:
+    "Does Iran believe victims should be able to pursue accountability against both armed groups and supporting States where legally appropriate?"
+},
+
+{
+    id: 304,
+
+    title:
+    "Iran's opponents challenge its claim that proxy warfare is defensive",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran has described its regional partnerships as part of a defensive strategy. Opponents argue that attacks against commercial shipping, foreign military personnel and civilian populations demonstrate an offensive dimension to the activities of Iran-aligned groups.",
+
+    victims:
+    "Civilians, military personnel and international commercial operators were affected.",
+
+    legalIssues:
+    [
+        "UN Charter",
+        "Self-defence principles",
+        "IHL distinction",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional escalation",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— How does Iran define the legal limits of a defensive alliance with non-State armed groups?",
+        "— Can attacks against commercial shipping or foreign military personnel be considered defensive simply because Iran claims a broader regional security objective?"
+    ],
+
+    followUp:
+    "What specific legal principle does Iran rely on to justify military support for its regional allies?"
+},
+
+{
+    id: 305,
+
+    title:
+    "Iran's regional armed-group network becomes a central challenge to its claim of supporting regional stability",
+
+    date:
+    "2023–2024",
+
+    location:
+    "Middle East",
+
+    facts:
+    "Iran's support for Hezbollah, the Houthis and other aligned armed groups became a central issue in debates over regional escalation. Opponents argue that the scale of this network allows conflicts to spread across borders and increases risks to civilians, foreign forces and international commerce.",
+
+    victims:
+    "Civilians, military personnel, commercial sailors and humanitarian operations were affected across multiple States.",
+
+    legalIssues:
+    [
+        "UN Charter Article 2(4)",
+        "International humanitarian law",
+        "State responsibility",
+        "International peace and security"
+    ],
+
+    sources:
+    [
+        {
+            organisation:
+            "United Nations",
+
+            title:
+            "Security Council discussions on regional escalation",
+
+            url:
+            "https://press.un.org/en/"
+        }
+    ],
+
+    pois:
+    [
+        "— How can Iran claim to be a force for regional stability while supporting armed groups operating across several separate conflicts?",
+        "— What concrete evidence can Iran provide that its support for these groups reduces rather than increases threats to international peace and security?"
+    ],
+
+    followUp:
+    "Will Iran support an internationally monitored framework requiring all States to prevent armed groups under their influence from attacking civilians, commercial shipping or foreign military personnel?"
+},
+
     
 
 ];
@@ -14645,7 +21017,7 @@ const poisHTML = (incident.pois || [])
 
                 <div class="status ${incident.statusClass}">
 
-                    ${escapeHTML(incident.status)}
+                    ${escapeHTML(incident.status || "Documented incident")}
 
                 </div>
 
@@ -14685,7 +21057,7 @@ const poisHTML = (incident.pois || [])
 
                     <p>
 
-                        ${escapeHTML(incident.batch)}
+                        ${escapeHTML(     incident.batch ||     "Batch " + Math.ceil((incident.id - 1) / 25) )}
 
                     </p>
 
@@ -14855,8 +21227,85 @@ searchInput.addEventListener(
 
 displayResults(incidents);
 
+  const approvedUsers = [
+
+    "Hrishi",
+    "Umar",
+    "Zayan",
+    "Arjun",
+    "Arhaan",
+    "Aarav",
+    "Shannen",
+    "Guest"
+
+];
+
+
+const loginScreen =
+document.getElementById("loginScreen");
+
+
+const databaseApp =
+document.getElementById("databaseApp");
+
+
+const usernameInput =
+document.getElementById("usernameInput");
+
+
+const loginButton =
+document.getElementById("loginButton");
+
+
+const loginError =
+document.getElementById("loginError");
+
+
+databaseApp.style.display = "none";
+
+
+loginButton.addEventListener("click", () => {
+
+    const enteredName =
+    usernameInput.value.trim().toLowerCase();
+
+
+    const isApproved =
+    approvedUsers.some(name =>
+        name.toLowerCase() === enteredName
+    );
+
+
+    if (isApproved) {
+
+        loginScreen.style.display = "none";
+
+        databaseApp.style.display = "block";
+
+    }
+
+    else {
+
+        loginError.textContent =
+        "Access restricted. This database is available only to authorized users.";
+
+    }
+
+});
+
+
+usernameInput.addEventListener("keydown", event => {
+
+    if (event.key === "Enter") {
+
+        loginButton.click();
+
+    }
+
+});
 
 </script>
+</div>
 
 </body>
 
