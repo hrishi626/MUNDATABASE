@@ -1,0 +1,2162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Israel–Iran MUN Research Database</title>
+
+<style>
+
+:root {
+    --background: #0b1120;
+    --background-secondary: #111827;
+    --card: #172033;
+    --card-hover: #1d293d;
+    --text: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --muted: #94a3b8;
+    --border: #263449;
+
+    --blue: #60a5fa;
+    --blue-dark: #2563eb;
+    --blue-light: #172554;
+
+    --red: #f87171;
+    --red-light: #3f1d24;
+
+    --orange: #fb923c;
+    --orange-light: #431f13;
+
+    --green: #34d399;
+    --green-light: #12352e;
+
+    --purple: #c084fc;
+    --purple-light: #32164d;
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    background: #0f172a;
+    border-bottom: 1px solid var(--border);
+    padding: 30px 20px;
+}
+
+.header-inner {
+    max-width: 1250px;
+    margin: auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #f8fafc;
+}
+
+.subtitle {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* SEARCH */
+
+.search-area {
+    max-width: 1250px;
+    margin: 24px auto 0;
+    padding: 0 20px;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 15px;
+    background: #111827;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: #64748b;
+}
+
+#searchInput:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
+}
+
+#searchButton {
+    padding: 0 22px;
+    background: var(--blue-dark);
+    color: white;
+}
+
+#searchButton:hover {
+    background: #3b82f6;
+}
+
+#clearButton {
+    padding: 0 18px;
+    background: #273449;
+    color: var(--text-secondary);
+}
+
+#clearButton:hover {
+    background: #334155;
+}
+
+button {
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.search-explanation {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+code {
+    background: #1e293b;
+    color: #93c5fd;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+/* QUICK SEARCHES */
+
+.quick-searches {
+    max-width: 1250px;
+    margin: 14px auto 0;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.quick-search {
+    padding: 8px 13px;
+    background: #172033;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+.quick-search:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: #1e293b;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1250px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+#resultCount {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* CARDS */
+
+.incident-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 16px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+}
+
+.incident-card:hover {
+    border-color: #3b82f6;
+    background: var(--card-hover);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.incident-title {
+    margin: 0;
+    font-size: 21px;
+    color: #f8fafc;
+}
+
+.incident-meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* STATUS */
+
+.status {
+    padding: 7px 10px;
+    border-radius: 7px;
+    font-size: 12px;
+    height: fit-content;
+    white-space: nowrap;
+}
+
+.status-confirmed {
+    background: var(--green-light);
+    color: var(--green);
+}
+
+.status-allegation {
+    background: var(--orange-light);
+    color: var(--orange);
+}
+
+.status-disputed {
+    background: var(--red-light);
+    color: var(--red);
+}
+
+.status-legal {
+    background: var(--purple-light);
+    color: var(--purple);
+}
+
+/* TAGS */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 15px;
+}
+
+.tag {
+    background: var(--blue-light);
+    color: #93c5fd;
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+/* SUMMARY */
+
+.summary {
+    margin-top: 17px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+/* DETAILS */
+
+.view-button {
+    margin-top: 18px;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+}
+
+.view-button:hover {
+    background: #3b82f6;
+}
+
+.details {
+    display: none;
+    border-top: 1px solid var(--border);
+    margin-top: 22px;
+    padding-top: 22px;
+}
+
+.details.open {
+    display: block;
+}
+
+.section {
+    margin-bottom: 27px;
+}
+
+.section h3 {
+    margin-bottom: 11px;
+    font-size: 17px;
+    color: #f8fafc;
+}
+
+.section p {
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+/* FACT BOX */
+
+.fact-box {
+    background: #111827;
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 9px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+/* VICTIMS */
+
+.victim {
+    background: var(--orange-light);
+    border-left: 4px solid var(--orange);
+    border-radius: 7px;
+    padding: 13px;
+    margin-bottom: 9px;
+    line-height: 1.55;
+    color: #fed7aa;
+}
+
+/* LEGAL CARDS */
+
+.legal-card {
+    background: #111827;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.legal-heading {
+    font-weight: bold;
+    color: #93c5fd;
+}
+
+.legal-provision {
+    margin-top: 7px;
+    font-weight: bold;
+    color: #f1f5f9;
+}
+
+.legal-application {
+    margin-top: 8px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.legal-status {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* SOURCES */
+
+.source {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    background: #111827;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 13px;
+    margin-bottom: 8px;
+}
+
+.source-organisation {
+    font-weight: bold;
+    color: #f8fafc;
+}
+
+.source-title {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.source a {
+    color: var(--blue);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.source a:hover {
+    text-decoration: underline;
+}
+
+/* POIs */
+
+.poi {
+    background: var(--blue-light);
+    border-left: 4px solid var(--blue);
+    padding: 14px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #dbeafe;
+}
+
+/* FOLLOW-UP */
+
+.follow-up {
+    background: var(--red-light);
+    border-left: 4px solid var(--red);
+    padding: 14px;
+    line-height: 1.6;
+    color: #fecaca;
+}
+
+/* EMPTY */
+
+.empty {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    #searchButton,
+    #clearButton {
+        padding: 12px;
+    }
+
+    .card-header {
+        flex-direction: column;
+    }
+
+    .source {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-inner">
+
+        <h1>
+            Israel–Iran MUN Research Database
+        </h1>
+
+        <div class="subtitle">
+
+            Search incidents, civilians, military actions,
+            international law, sources and POIs.
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="search-area">
+
+    <div class="search-row">
+
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Search: Iran+children+Amnesty"
+        >
+
+        <button id="searchButton">
+            Search
+        </button>
+
+        <button id="clearButton">
+            Clear
+        </button>
+
+    </div>
+
+
+    <div class="search-explanation">
+
+        Use <code>+</code> between terms.
+
+        <br>
+
+        <code>Iran+children</code>
+        means both Iran AND children.
+
+        <br>
+
+        <code>Israel+ICCPR+Article 6</code>
+        searches for all three terms.
+
+    </div>
+
+</section>
+
+
+<div class="quick-searches">
+
+    <button
+        class="quick-search"
+        onclick="quickSearch('Israel')"
+    >
+        Israel
+    </button>
+
+    <button
+        class="quick-search"
+        onclick="quickSearch('Iran')"
+    >
+        Iran
+    </button>
+
+    <button
+        class="quick-search"
+        onclick="quickSearch('United States')"
+    >
+        United States
+    </button>
+
+    <button
+        class="quick-search"
+        onclick="quickSearch('Children')"
+    >
+        Children
+    </button>
+
+    <button
+        class="quick-search"
+        onclick="quickSearch('Civilian')"
+    >
+        Civilian
+    </button>
+
+    <button
+        class="quick-search"
+        onclick="quickSearch('ICCPR Article 6')"
+    >
+        ICCPR Article 6
+    </button>
+
+</div>
+
+
+<main>
+
+    <div class="results-header">
+
+        <div id="resultCount">
+            Loading database...
+        </div>
+
+    </div>
+
+    <div id="results"></div>
+
+</main>
+
+
+<script>
+
+
+/*
+============================================================
+
+BATCH 1
+
+ISRAEL–IRAN DIRECT CONFLICT
+
+This is the only batch currently in the database.
+
+Future batches can simply be added as new objects inside
+the incidents array.
+
+============================================================
+*/
+
+
+const incidents = [
+
+
+/* ============================================================
+   INCIDENT 1
+============================================================ */
+
+
+{
+
+    id: 1,
+
+    batch:
+    "Batch 1 — Israel–Iran Direct Conflict",
+
+    title:
+    "Israel launches major military operation against Iran",
+
+    date:
+    "13 June 2025",
+
+    location:
+    "Multiple locations in Iran",
+
+    actors: [
+
+        "Israel",
+
+        "Iran"
+
+    ],
+
+    status:
+    "Confirmed event",
+
+    statusClass:
+    "status-confirmed",
+
+    tags: [
+
+        "Israel",
+
+        "Iran",
+
+        "Airstrikes",
+
+        "Military Conflict",
+
+        "Nuclear Programme",
+
+        "Senior Officials",
+
+        "Civilian Casualties"
+
+    ],
+
+    summary:
+
+    "Israel launched a major military operation against Iran on 13 June 2025, striking Iranian military and nuclear-related targets and triggering a direct military confrontation between the two states.",
+
+
+    facts:
+
+    "Israel announced military action against Iran in June 2025. The operation involved strikes against targets connected to Iran's military and nuclear infrastructure. The conflict subsequently involved Iranian missile attacks against Israel and a wider escalation involving the United States.",
+
+
+    victims: [
+
+        {
+
+            name:
+            "Multiple Iranian civilians and military personnel",
+
+            age:
+            "Various",
+
+            status:
+            "Mixed",
+
+            details:
+
+            "Casualties were reported in Iran during the escalation. Exact totals and civilian status varied between reports and changed during the conflict."
+
+        }
+
+    ],
+
+
+    legalIssues: [
+
+        {
+
+            law:
+            "UN Charter",
+
+            article:
+            "Article 2(4)",
+
+            provision:
+
+            "States must refrain from the threat or use of force against the territorial integrity or political independence of another state.",
+
+            application:
+
+            "The use of force against Iranian territory raises the question of whether the action was prohibited force or was legally justified under an applicable exception such as self-defence.",
+
+            status:
+
+            "Legal issue requiring assessment of the claimed justification and facts."
+
+        },
+
+
+        {
+
+            law:
+            "UN Charter",
+
+            article:
+            "Article 51",
+
+            provision:
+
+            "Recognises the inherent right of individual or collective self-defence if an armed attack occurs.",
+
+            application:
+
+            "Israel's legal justification would require examination of whether the conditions for self-defence were satisfied, including the existence of an armed attack or sufficiently imminent threat under the interpretation advanced.",
+
+            status:
+
+            "Disputed legal justification."
+
+        },
+
+
+        {
+
+            law:
+            "International Humanitarian Law",
+
+            article:
+            "Distinction",
+
+            provision:
+
+            "Parties must distinguish between civilians and civilian objects and military objectives.",
+
+            application:
+
+            "Every individual strike must be assessed to determine whether the target was a lawful military objective and whether the attack was directed at that objective.",
+
+            status:
+
+            "Must be assessed incident by incident."
+
+        },
+
+
+        {
+
+            law:
+            "International Humanitarian Law",
+
+            article:
+            "Proportionality",
+
+            provision:
+
+            "Expected civilian harm must not be excessive in relation to the anticipated concrete and direct military advantage.",
+
+            application:
+
+            "Civilian casualties and damage to civilian objects raise questions concerning proportionality where attacks affected populated areas.",
+
+            status:
+
+            "Legal assessment depends on the facts of each strike."
+
+        }
+
+    ],
+
+
+    sources: [
+
+        {
+
+            organisation:
+            "Amnesty International",
+
+            title:
+            "Urgent need to protect civilians amid unprecedented escalation in hostilities between Israel and Iran",
+
+            url:
+            "https://www.amnesty.org/en/latest/news/2025/06/urgent-need-to-protect-civilians-amid-unprecedented-escalation-in-hostilities-between-israel-and-iran/"
+
+        },
+
+
+        {
+
+            organisation:
+            "The White House",
+
+            title:
+            "Statement from Secretary of State Marco Rubio",
+
+            url:
+            "https://www.whitehouse.gov/briefings-statements/2025/06/statement-from-secretary-of-state-marco-rubio/"
+
+        }
+
+    ],
+
+
+    pois: [
+
+        "What specific legal basis does the delegate believe justified the use of force against Iranian territory under the UN Charter?",
+
+        "Does the delegate accept that even when a state invokes self-defence, every individual attack must still comply with distinction, proportionality and precautions under international humanitarian law?"
+
+    ],
+
+
+    followUp:
+
+    "If the delegate argues that the threat was sufficient to justify force, what objective evidence demonstrates that peaceful alternatives were unavailable or inadequate at the time of the attack?"
+
+},
+
+
+/* ============================================================
+   INCIDENT 2
+============================================================ */
+
+
+{
+
+    id: 2,
+
+    batch:
+    "Batch 1 — Israel–Iran Direct Conflict",
+
+    title:
+    "Civilian casualties reported in both Iran and Israel during the escalation",
+
+    date:
+    "16–18 June 2025",
+
+    location:
+    "Iran and Israel",
+
+    actors: [
+
+        "Israel",
+
+        "Iran"
+
+    ],
+
+    status:
+    "Reported by human rights organisation",
+
+    statusClass:
+    "status-confirmed",
+
+    tags: [
+
+        "Israel",
+
+        "Iran",
+
+        "Civilians",
+
+        "Women",
+
+        "Children",
+
+        "Civilian Casualties",
+
+        "International Humanitarian Law"
+
+    ],
+
+    summary:
+
+    "Amnesty International reported substantial civilian casualties in both Iran and Israel during the June 2025 escalation and urged both sides to comply with international humanitarian law.",
+
+
+    facts:
+
+    "Amnesty reported that Iranian authorities stated Israeli attacks had killed at least 224 people by 16 June, including women and children, while Israeli authorities reported that Iranian attacks had killed at least 24 people in Israel and injured hundreds. The figures were reported during an ongoing conflict and were subject to change.",
+
+
+    victims: [
+
+        {
+
+            name:
+            "Iranian civilians",
+
+            age:
+            "Various",
+
+            status:
+            "Civilians",
+
+            details:
+
+            "Iranian authorities reported deaths and injuries resulting from Israeli attacks."
+
+        },
+
+
+        {
+
+            name:
+            "Israeli civilians",
+
+            age:
+            "Various",
+
+            status:
+            "Civilians",
+
+            details:
+
+            "Israeli authorities reported civilian deaths and injuries resulting from Iranian attacks."
+
+        }
+
+    ],
+
+
+    legalIssues: [
+
+        {
+
+            law:
+            "ICCPR",
+
+            article:
+            "Article 6",
+
+            provision:
+
+            "Every human being has the inherent right to life.",
+
+            application:
+
+            "Civilian deaths caused by attacks may engage the right to life. The legality of each death depends on the applicable legal framework and the circumstances of the attack.",
+
+            status:
+
+            "Potential legal concern; individual incidents require investigation."
+
+        },
+
+
+        {
+
+            law:
+            "International Humanitarian Law",
+
+            article:
+            "Distinction",
+
+            provision:
+
+            "Civilians may not be the object of attack.",
+
+            application:
+
+            "Attacks directed against civilian populations or civilian objects would raise serious concerns under the principle of distinction.",
+
+            status:
+
+            "Must be assessed based on target and intent."
+
+        },
+
+
+        {
+
+            law:
+            "International Humanitarian Law",
+
+            article:
+            "Precautions",
+
+            provision:
+
+            "Feasible precautions must be taken to minimise civilian harm.",
+
+            application:
+
+            "The scale of civilian casualties raises questions concerning target verification, choice of weapons and timing of attacks.",
+
+            status:
+
+            "Incident-specific assessment required."
+
+        }
+
+    ],
+
+
+    sources: [
+
+        {
+
+            organisation:
+            "Amnesty International",
+
+            title:
+            "Urgent need to protect civilians amid unprecedented escalation",
+
+            url:
+            "https://www.amnesty.org/en/latest/news/2025/06/urgent-need-to-protect-civilians-amid-unprecedented-escalation-in-hostilities-between-israel-and-iran/"
+
+        }
+
+    ],
+
+
+    pois: [
+
+        "Amnesty International reported civilian casualties on both sides. What concrete measures has the delegate's government taken to reduce civilian harm in future attacks?",
+
+        "Does the delegate accept that condemning civilian harm by one side cannot justify deliberately targeting civilians on the other side?"
+
+    ],
+
+
+    followUp:
+
+    "Will the delegate support independent investigations into credible allegations of unlawful attacks regardless of which state is responsible?"
+
+},
+
+
+/* ============================================================
+   INCIDENT 3
+============================================================ */
+
+
+{
+
+    id: 3,
+
+    batch:
+    "Batch 1 — Israel–Iran Direct Conflict",
+
+    title:
+    "Iranian missile strike killed civilians in Bat Yam",
+
+    date:
+    "15 June 2025",
+
+    location:
+    "Bat Yam, Israel",
+
+    actors: [
+
+        "Iran"
+
+    ],
+
+    status:
+    "Investigated by Human Rights Watch",
+
+    statusClass:
+    "status-confirmed",
+
+    tags: [
+
+        "Iran",
+
+        "Israel",
+
+        "Bat Yam",
+
+        "Missile",
+
+        "Civilians",
+
+        "Children",
+
+        "War Crimes"
+
+    ],
+
+    summary:
+
+    "Human Rights Watch reported that an Iranian ballistic missile struck a populated area in Bat Yam, killing nine civilians, including three children.",
+
+
+    facts:
+
+    "Human Rights Watch reported that the missile struck a 12-storey apartment building in Bat Yam. The organisation reported that nine civilians, including three children, were killed. HRW said the site was between 1.5 and 9 kilometres from military sites and assessed that the documented strikes warranted investigation as possible war crimes.",
+
+
+    victims: [
+
+        {
+
+            name:
+            "Nine civilians",
+
+            age:
+            "Including three children",
+
+            status:
+            "Civilian",
+
+            details:
+
+            "Killed when a missile struck a residential building in Bat Yam."
+
+        }
+
+    ],
+
+
+    legalIssues: [
+
+        {
+
+            law:
+            "ICCPR",
+
+            article:
+            "Article 6",
+
+            provision:
+            "Right to life.",
+
+            application:
+
+            "The deaths of civilians may engage the right to life and require assessment of whether the attack was unlawful or arbitrary.",
+
+            status:
+
+            "Potential violation; circumstances investigated by HRW."
+
+        },
+
+
+        {
+
+            law:
+            "International Humanitarian Law",
+
+            article:
+            "Distinction",
+
+            provision:
+
+            "Civilians and civilian objects must not be intentionally targeted.",
+
+            application:
+
+            "A missile striking a residential building without a military objective in the vicinity may raise serious concerns under distinction.",
+
+            status:
+
+            "HRW assessed documented strikes as potentially unlawful."
+
+        },
+
+
+        {
+
+            law:
+            "Rome Statute",
+
+            article:
+            "Article 8",
+
+            provision:
+
+            "Certain intentional or indiscriminate attacks against civilians may constitute war crimes.",
+
+            application:
+
+            "The facts should be investigated to determine whether the attack was intentionally directed against civilians or was indiscriminate.",
+
+            status:
+
+            "Requires legal investigation."
+
+        }
+
+    ],
+
+
+    sources: [
+
+        {
+
+            organisation:
+            "Human Rights Watch",
+
+            title:
+            "Iranian Missile Strikes on Israeli Civilians Likely War Crimes",
+
+            url:
+            "https://www.hrw.org/news/2025/06/19/iranian-missile-strikes-israeli-civilians-likely-war-crimes"
+
+        }
+
+    ],
+
+
+    pois: [
+
+        "Human Rights Watch documented a missile strike that killed nine civilians, including three children. What was the intended military target of the missile?",
+
+        "If there was no military objective in the immediate vicinity of the residential building, how does Iran justify the use of a ballistic missile in that area?"
+
+    ],
+
+
+    followUp:
+
+    "Does Iran support an independent investigation into the documented civilian deaths in Bat Yam?"
+
+},
+
+
+/* ============================================================
+   INCIDENT 4
+============================================================ */
+
+
+{
+
+    id: 4,
+
+    batch:
+    "Batch 1 — Israel–Iran Direct Conflict",
+
+    title:
+    "United States stated that Israel had acted unilaterally against Iran",
+
+    date:
+    "12 June 2025",
+
+    location:
+    "Washington, D.C. / Middle East",
+
+    actors: [
+
+        "United States",
+
+        "Israel",
+
+        "Iran"
+
+    ],
+
+    status:
+    "Official United States statement",
+
+    statusClass:
+    "status-confirmed",
+
+    tags: [
+
+        "United States",
+
+        "Israel",
+
+        "Iran",
+
+        "Self-Defence",
+
+        "Diplomacy",
+
+        "Military Conflict"
+
+    ],
+
+    summary:
+
+    "The White House stated that Israel had taken unilateral action against Iran and that the United States was not involved in the strikes at that time.",
+
+
+    facts:
+
+    "In a statement dated 12 June 2025, Secretary of State Marco Rubio said Israel had taken unilateral action against Iran and that the United States was not involved in the strikes. The statement said that Israel believed the action was necessary for self-defence and warned Iran not to target US interests or personnel.",
+
+
+    victims: [
+
+        {
+
+            name:
+            "Not applicable to this specific diplomatic statement",
+
+            age:
+            "N/A",
+
+            status:
+            "N/A",
+
+            details:
+
+            "This entry records the official US position at the time of the statement."
+
+        }
+
+    ],
+
+
+    legalIssues: [
+
+        {
+
+            law:
+            "UN Charter",
+
+            article:
+            "Article 51",
+
+            provision:
+
+            "Self-defence after an armed attack.",
+
+            application:
+
+            "The statement provides an official US description of Israel's claimed self-defence rationale. Whether the legal conditions were satisfied remains a separate question.",
+
+            status:
+
+            "Official claim, not an independent legal determination."
+
+        }
+
+    ],
+
+
+    sources: [
+
+        {
+
+            organisation:
+            "The White House",
+
+            title:
+            "Statement from Secretary of State Marco Rubio",
+
+            url:
+            "https://www.whitehouse.gov/briefings-statements/2025/06/statement-from-secretary-of-state-marco-rubio/"
+
+        }
+
+    ],
+
+
+    pois: [
+
+        "The United States initially stated that it was not involved in the Israeli strikes. What changed in the United States' position when it later became directly involved in military action against Iran?",
+
+        "Does the United States believe that supporting another state's claimed self-defence automatically establishes the legality of every individual strike?"
+
+    ],
+
+
+    followUp:
+
+    "Will the United States publish the legal assessment it relied upon when determining whether military action against Iran was lawful?"
+
+},
+
+
+/* ============================================================
+   INCIDENT 5
+============================================================ */
+
+
+{
+
+    id: 5,
+
+    batch:
+    "Batch 1 — Israel–Iran Direct Conflict",
+
+    title:
+    "Iranian attacks caused civilian deaths and damage in Israel",
+
+    date:
+    "June 2025",
+
+    location:
+    "Multiple locations in Israel",
+
+    actors: [
+
+        "Iran",
+
+        "Israel"
+
+    ],
+
+    status:
+    "Reported civilian harm",
+
+    statusClass:
+    "status-confirmed",
+
+    tags: [
+
+        "Iran",
+
+        "Israel",
+
+        "Missiles",
+
+        "Civilians",
+
+        "Civilian Infrastructure",
+
+        "International Humanitarian Law"
+
+    ],
+
+    summary:
+
+    "Iranian missile attacks during the June 2025 escalation caused civilian deaths, injuries and damage to civilian areas in Israel, according to reports cited by human rights organisations and Israeli authorities.",
+
+
+    facts:
+
+    "During the June 2025 escalation, Iranian missile attacks struck areas in Israel and caused civilian deaths and injuries. The attacks raised questions under international humanitarian law concerning the distinction between military objectives and civilian objects, the use of weapons capable of causing wide-area effects, and the obligation to take feasible precautions.",
+
+
+    victims: [
+
+        {
+
+            name:
+            "Israeli civilians",
+
+            age:
+            "Various",
+
+            status:
+            "Civilians",
+
+            details:
+
+            "Civilians were reported killed and injured in Iranian missile attacks during the escalation."
+
+        }
+
+    ],
+
+
+    legalIssues: [
+
+        {
+
+            law:
+            "ICCPR",
+
+            article:
+            "Article 6",
+
+            provision:
+
+            "Right to life.",
+
+            application:
+
+            "Civilian deaths caused by attacks may engage the right to life and require assessment of whether the killings resulted from unlawful attacks.",
+
+            status:
+
+            "Potential legal concern requiring investigation."
+
+        },
+
+
+        {
+
+            law:
+            "International Humanitarian Law",
+
+            article:
+            "Distinction",
+
+            provision:
+
+            "Parties must distinguish between civilian objects and military objectives.",
+
+            application:
+
+            "The use of missiles against populated areas raises questions concerning whether the attacks were directed at lawful military objectives.",
+
+            status:
+
+            "Must be assessed on an incident-by-incident basis."
+
+        },
+
+
+        {
+
+            law:
+            "International Humanitarian Law",
+
+            article:
+            "Proportionality",
+
+            provision:
+
+            "Expected civilian harm must not be excessive in relation to the anticipated military advantage.",
+
+            application:
+
+            "Where attacks affected populated areas, the expected civilian consequences and the anticipated military advantage are relevant to legal assessment.",
+
+            status:
+
+            "Requires investigation of individual strikes."
+
+        }
+
+    ],
+
+
+    sources: [
+
+        {
+
+            organisation:
+            "Amnesty International",
+
+            title:
+            "Urgent need to protect civilians amid unprecedented escalation in hostilities between Israel and Iran",
+
+            url:
+            "https://www.amnesty.org/en/latest/news/2025/06/urgent-need-to-protect-civilians-amid-unprecedented-escalation-in-hostilities-between-israel-and-iran/"
+
+        }
+
+    ],
+
+
+    pois: [
+
+        "What specific military objectives were being targeted in the Iranian missile attacks that caused civilian deaths and damage in Israeli population centres?",
+
+        "What precautions did Iran take to minimise civilian harm when launching missiles toward areas containing civilian populations?"
+
+    ],
+
+
+    followUp:
+
+    "Will Iran support independent investigations into civilian casualties caused by its attacks during the escalation?"
+
+}
+
+];
+
+
+
+/* ============================================================
+   SEARCH ENGINE
+============================================================ */
+
+
+const searchInput =
+document.getElementById("searchInput");
+
+
+const searchButton =
+document.getElementById("searchButton");
+
+
+const clearButton =
+document.getElementById("clearButton");
+
+
+const resultsContainer =
+document.getElementById("results");
+
+
+const resultCount =
+document.getElementById("resultCount");
+
+
+
+function getSearchableText(incident) {
+
+    return JSON.stringify(incident).toLowerCase();
+
+}
+
+
+
+function searchDatabase() {
+
+    const query =
+    searchInput.value.trim().toLowerCase();
+
+
+    if (!query) {
+
+        displayResults(incidents);
+
+        return;
+
+    }
+
+
+    const terms = query
+
+        .split("+")
+
+        .map(term => term.trim())
+
+        .filter(term => term.length > 0);
+
+
+    const results = incidents.filter(incident => {
+
+        const searchableText =
+        getSearchableText(incident);
+
+
+        return terms.every(term =>
+
+            searchableText.includes(term)
+
+        );
+
+    });
+
+
+    displayResults(results);
+
+}
+
+
+
+function quickSearch(term) {
+
+    searchInput.value = term;
+
+    searchDatabase();
+
+}
+
+
+
+function escapeHTML(value) {
+
+    return String(value)
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+
+}
+
+
+
+function displayResults(results) {
+
+    resultsContainer.innerHTML = "";
+
+
+    resultCount.textContent =
+
+    `${results.length} result${results.length === 1 ? "" : "s"} found`;
+
+
+    if (results.length === 0) {
+
+        resultsContainer.innerHTML = `
+
+            <div class="empty">
+
+                <h3>
+                    No results found
+                </h3>
+
+                <p>
+                    Try fewer search terms.
+                </p>
+
+                <p>
+                    Example:
+                    <code>Iran+children</code>
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    results.forEach(incident => {
+
+
+        const card =
+        document.createElement("article");
+
+
+        card.className =
+        "incident-card";
+
+
+        const tagsHTML =
+
+        incident.tags
+
+        .map(tag => `
+
+            <span class="tag">
+
+                ${escapeHTML(tag)}
+
+            </span>
+
+        `)
+
+        .join("");
+
+
+        const victimsHTML =
+
+        incident.victims
+
+        .map(victim => `
+
+            <div class="victim">
+
+                <strong>
+
+                    ${escapeHTML(victim.name)}
+
+                </strong>
+
+                <br>
+
+                Age:
+                ${escapeHTML(victim.age)}
+
+                <br>
+
+                Status:
+                ${escapeHTML(victim.status)}
+
+                <br><br>
+
+                ${escapeHTML(victim.details)}
+
+            </div>
+
+        `)
+
+        .join("");
+
+
+        const legalHTML =
+
+        incident.legalIssues
+
+        .map(issue => `
+
+            <div class="legal-card">
+
+                <div class="legal-heading">
+
+                    ${escapeHTML(issue.law)}
+
+                    —
+
+                    ${escapeHTML(issue.article)}
+
+                </div>
+
+
+                <div class="legal-provision">
+
+                    ${escapeHTML(issue.provision)}
+
+                </div>
+
+
+                <div class="legal-application">
+
+                    <strong>
+                        How this may apply:
+                    </strong>
+
+                    ${escapeHTML(issue.application)}
+
+                </div>
+
+
+                <div class="legal-status">
+
+                    <strong>
+                        Status:
+                    </strong>
+
+                    ${escapeHTML(issue.status)}
+
+                </div>
+
+            </div>
+
+        `)
+
+        .join("");
+
+
+        const sourcesHTML =
+
+        incident.sources
+
+        .map(source => `
+
+            <div class="source">
+
+                <div>
+
+                    <div class="source-organisation">
+
+                        ${escapeHTML(source.organisation)}
+
+                    </div>
+
+
+                    <div class="source-title">
+
+                        ${escapeHTML(source.title)}
+
+                    </div>
+
+                </div>
+
+
+                <a
+
+                    href="${source.url}"
+
+                    target="_blank"
+
+                    rel="noopener noreferrer"
+
+                >
+
+                    Open Source
+
+                </a>
+
+            </div>
+
+        `)
+
+        .join("");
+
+
+        const poisHTML =
+
+        incident.pois
+
+        .map((poi, index) => `
+
+            <div class="poi">
+
+                <strong>
+
+                    POI ${index + 1}
+
+                </strong>
+
+                <br><br>
+
+                ${escapeHTML(poi)}
+
+            </div>
+
+        `)
+
+        .join("");
+
+
+        card.innerHTML = `
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2 class="incident-title">
+
+                        ${escapeHTML(incident.title)}
+
+                    </h2>
+
+
+                    <div class="incident-meta">
+
+                        ${escapeHTML(incident.date)}
+
+                        ·
+
+                        ${escapeHTML(incident.location)}
+
+                    </div>
+
+                </div>
+
+
+                <div class="status ${incident.statusClass}">
+
+                    ${escapeHTML(incident.status)}
+
+                </div>
+
+            </div>
+
+
+            <div class="tags">
+
+                ${tagsHTML}
+
+            </div>
+
+
+            <div class="summary">
+
+                ${escapeHTML(incident.summary)}
+
+            </div>
+
+
+            <button class="view-button">
+
+                View Full Entry
+
+            </button>
+
+
+            <div class="details">
+
+
+                <div class="section">
+
+                    <h3>
+                        Batch
+                    </h3>
+
+
+                    <p>
+
+                        ${escapeHTML(incident.batch)}
+
+                    </p>
+
+                </div>
+
+
+                <div class="section">
+
+                    <h3>
+                        Detailed Facts
+                    </h3>
+
+
+                    <div class="fact-box">
+
+                        ${escapeHTML(incident.facts)}
+
+                    </div>
+
+                </div>
+
+
+                <div class="section">
+
+                    <h3>
+                        Victims / Persons Affected
+                    </h3>
+
+
+                    ${victimsHTML}
+
+                </div>
+
+
+                <div class="section">
+
+                    <h3>
+                        Legal Issues and Possible Violations
+                    </h3>
+
+
+                    ${legalHTML}
+
+                </div>
+
+
+                <div class="section">
+
+                    <h3>
+                        Sources
+                    </h3>
+
+
+                    ${sourcesHTML}
+
+                </div>
+
+
+                <div class="section">
+
+                    <h3>
+                        POIs
+                    </h3>
+
+
+                    ${poisHTML}
+
+                </div>
+
+
+                <div class="section">
+
+                    <h3>
+                        Follow-Up Question
+                    </h3>
+
+
+                    <div class="follow-up">
+
+                        ${escapeHTML(incident.followUp)}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        const viewButton =
+        card.querySelector(".view-button");
+
+
+        const details =
+        card.querySelector(".details");
+
+
+        viewButton.addEventListener("click", () => {
+
+
+            details.classList.toggle("open");
+
+
+            viewButton.textContent =
+
+            details.classList.contains("open")
+
+            ? "Hide Full Entry"
+
+            : "View Full Entry";
+
+        });
+
+
+        resultsContainer.appendChild(card);
+
+    });
+
+}
+
+
+
+searchButton.addEventListener(
+
+    "click",
+
+    searchDatabase
+
+);
+
+
+
+clearButton.addEventListener(
+
+    "click",
+
+    () => {
+
+        searchInput.value = "";
+
+        displayResults(incidents);
+
+    }
+
+);
+
+
+
+searchInput.addEventListener(
+
+    "keydown",
+
+    event => {
+
+        if (event.key === "Enter") {
+
+            searchDatabase();
+
+        }
+
+    }
+
+);
+
+
+
+displayResults(incidents);
+
+
+</script>
+
+</body>
+
+</html>
