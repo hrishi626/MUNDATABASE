@@ -29434,48 +29434,40 @@ function searchDatabase() {
 
 
     if (
-        command === "ff" ||
-        command === "fullform"
-    ) {
+    command === "ff" ||
+    command === "fullform" ||
+    command === "full form"
+) {
 
-        const key =
-            searchTerm;
+    const key =
+        searchTerm.toLowerCase().trim();
 
-        const fullForm =
-            fullFormDatabase[key];
+    const entry =
+        knowledgeDatabase[key];
 
 
-        if (fullForm) {
+    if (entry) {
 
-            displayDefinition({
+        displayDefinition(entry);
 
-                name: key.toUpperCase(),
+    } else {
 
-                type: "Full Form",
+        displayDefinition({
 
-                definition: fullForm
+            name: key.toUpperCase(),
 
-            });
+            type: "Full Form",
 
-        } else {
+            definition:
+            "No full form has been added to the database yet."
 
-            displayDefinition({
-
-                name: key.toUpperCase(),
-
-                type: "Full Form",
-
-                definition:
-                "No full form has been added to the database yet."
-
-            });
-
-        }
-
-        return;
+        });
 
     }
 
+    return;
+
+}
     
 
     function normalizeSearch(text) {
