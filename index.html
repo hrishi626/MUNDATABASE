@@ -19,7 +19,7 @@
 
     justify-content: center;
 
-    background: #ffffff;
+    background: #111827;
 
     z-index: 9999;
 
@@ -28,7 +28,7 @@
 
 .login-box {
 
-    width: min(420px, 90%);
+    width: min(460px, 90%);
 
     text-align: center;
 
@@ -37,20 +37,22 @@
 
 .login-box h1 {
 
-    font-size: 28px;
+    color: white;
 
-    letter-spacing: 1px;
+    font-size: 32px;
 
-    margin-bottom: 10px;
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
 
 }
 
 
 .login-box p {
 
-    color: #666;
+    color: #9ca3af;
 
-    margin-bottom: 28px;
+    margin-bottom: 30px;
 
 }
 
@@ -59,11 +61,11 @@
 
     width: 100%;
 
-    padding: 15px 18px;
+    padding: 16px 20px;
 
-    border: 1px solid #d0d0d0;
+    border: 1px solid #374151;
 
-    border-radius: 24px;
+    border-radius: 8px;
 
     font-size: 16px;
 
@@ -71,12 +73,23 @@
 
     outline: none;
 
+    background: #1f2937;
+
+    color: white;
+
+}
+
+
+#usernameInput::placeholder {
+
+    color: #9ca3af;
+
 }
 
 
 #usernameInput:focus {
 
-    border-color: #555;
+    border-color: #9ca3af;
 
 }
 
@@ -85,15 +98,15 @@
 
     margin-top: 18px;
 
-    padding: 12px 28px;
+    padding: 13px 32px;
 
     border: none;
 
-    border-radius: 22px;
+    border-radius: 8px;
 
-    background: #222;
+    background: white;
 
-    color: white;
+    color: #111827;
 
     font-size: 15px;
 
@@ -104,14 +117,14 @@
 
 #loginButton:hover {
 
-    opacity: 0.85;
+    background: #e5e7eb;
 
 }
 
 
 #loginError {
 
-    color: #c62828;
+    color: #f87171;
 
     margin-top: 20px;
 
