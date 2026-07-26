@@ -588,7 +588,13 @@ main {
     }
 
 }
+.quick-search-heading {
 
+    text-align: center;
+
+    margin-bottom: 18px;
+
+}
 </style>
 </head>
 
@@ -678,7 +684,11 @@ main {
 </section>
 
 
-<div class="quick-searches">
+<div class="quick-search">
+
+    <h2 class="quick-search-heading">
+        Quick Search
+    </h2>
 
     <button
         class="quick-search"
@@ -20691,23 +20701,7 @@ function searchDatabase() {
 
 }
 
-const quickSearchSection =
-document.querySelector(".quick-search");
 
-if (quickSearchSection) {
-
-    const heading =
-    document.createElement("h2");
-
-    heading.textContent =
-    "Quick Search";
-
-    heading.className =
-    "quick-search-heading";
-
-    quickSearchSection.prepend(heading);
-
-}
 
 function quickSearch(term) {
 
