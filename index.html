@@ -14385,183 +14385,237 @@ function displayResults(results) {
         "incident-card";
 
 
-        const tagsHTML =
-
-        incident.tags
-
-        .map(tag => `
-
-            <span class="tag">
-
-                ${escapeHTML(tag)}
-
-            </span>
-
-        `)
-
-        .join("");
+       const tagsHTML = (incident.tags || [])
+    .map(tag => `
+        <span class="tag">
+            ${escapeHTML(
+                typeof tag === "string"
+                    ? tag
+                    : tag.name || tag.title || ""
+            )}
+        </span>
+    `)
+    .join("");
 
 
-        const victimsHTML =
+const victimsHTML = (() => {
 
-        incident.victims
+    if (!incident.victims) return "";
 
-        .map(victim => `
+    if (typeof incident.victims === "string") {
 
+        return `
             <div class="victim">
-
-                <strong>
-
-                    ${escapeHTML(victim.name)}
-
-                </strong>
-
-                <br>
-
-                Age:
-                ${escapeHTML(victim.age)}
-
-                <br>
-
-                Status:
-                ${escapeHTML(victim.status)}
-
-                <br><br>
-
-                ${escapeHTML(victim.details)}
-
+                ${escapeHTML(incident.victims)}
             </div>
+        `;
 
-        `)
+    }
 
-        .join("");
+    if (Array.isArray(incident.victims)) {
 
+        return incident.victims
+            .map(victim => {
 
-        const legalHTML =
+                if (typeof victim === "string") {
 
-        incident.legalIssues
+                    return `
+                        <div class="victim">
+                            ${escapeHTML(victim)}
+                        </div>
+                    `;
 
-        .map(issue => `
+                }
 
-            <div class="legal-card">
+                return `
+                    <div class="victim">
 
-                <div class="legal-heading">
+                        <strong>
+                            ${escapeHTML(victim.name || "")}
+                        </strong>
 
-                    ${escapeHTML(issue.law)}
+                        <br>
 
-                    —
+                        Age:
+                        ${escapeHTML(victim.age || "Not specified")}
 
-                    ${escapeHTML(issue.article)}
+                        <br>
 
-                </div>
-
-
-                <div class="legal-provision">
-
-                    ${escapeHTML(issue.provision)}
-
-                </div>
-
-
-                <div class="legal-application">
-
-                    <strong>
-                        How this may apply:
-                    </strong>
-
-                    ${escapeHTML(issue.application)}
-
-                </div>
-
-
-                <div class="legal-status">
-
-                    <strong>
                         Status:
-                    </strong>
+                        ${escapeHTML(victim.status || "Not specified")}
 
-                    ${escapeHTML(issue.status)}
+                        <br><br>
+
+                        ${escapeHTML(victim.details || "")}
+
+                    </div>
+                `;
+
+            })
+            .join("");
+
+    }
+
+    return "";
+
+})();
+
+
+const legalHTML = (() => {
+
+    if (!incident.legalIssues) return "";
+
+    if (Array.isArray(incident.legalIssues)) {
+
+        return incident.legalIssues
+            .map(issue => {
+
+                if (typeof issue === "string") {
+
+                    return `
+                        <div class="legal-card">
+
+                            <div class="legal-heading">
+                                ${escapeHTML(issue)}
+                            </div>
+
+                        </div>
+                    `;
+
+                }
+
+                return `
+                    <div class="legal-card">
+
+                        <div class="legal-heading">
+
+                            ${escapeHTML(issue.law || "")}
+
+                            —
+
+                            ${escapeHTML(issue.article || "")}
+
+                        </div>
+
+                        <div class="legal-provision">
+
+                            ${escapeHTML(issue.provision || "")}
+
+                        </div>
+
+                        <div class="legal-application">
+
+                            <strong>
+                                How this may apply:
+                            </strong>
+
+                            ${escapeHTML(issue.application || "")}
+
+                        </div>
+
+                        <div class="legal-status">
+
+                            <strong>
+                                Status:
+                            </strong>
+
+                            ${escapeHTML(issue.status || "")}
+
+                        </div>
+
+                    </div>
+                `;
+
+            })
+            .join("");
+
+    }
+
+    return "";
+
+})();
+
+
+const sourcesHTML = (incident.sources || [])
+    .map(source => {
+
+        if (typeof source === "string") {
+
+            return `
+                <div class="source">
+
+                    <div class="source-title">
+
+                        ${escapeHTML(source)}
+
+                    </div>
 
                 </div>
+            `;
 
-            </div>
+        }
 
-        `)
-
-        .join("");
-
-
-        const sourcesHTML =
-
-        incident.sources
-
-        .map(source => `
-
+        return `
             <div class="source">
 
                 <div>
 
                     <div class="source-organisation">
 
-                        ${escapeHTML(source.organisation)}
+                        ${escapeHTML(source.organisation || "")}
 
                     </div>
 
-
                     <div class="source-title">
 
-                        ${escapeHTML(source.title)}
+                        ${escapeHTML(source.title || "")}
 
                     </div>
 
                 </div>
 
-
-                <a
-
-                    href="${source.url}"
-
-                    target="_blank"
-
-                    rel="noopener noreferrer"
-
-                >
-
-                    Open Source
-
-                </a>
-
-            </div>
-
-        `)
-
-        .join("");
-
-
-        const poisHTML =
-
-        incident.pois
-
-        .map((poi, index) => `
-
-            <div class="poi">
-
-                <strong>
-
-                    POI ${index + 1}
-
-                </strong>
-
-                <br><br>
-
-                ${escapeHTML(poi)}
+                ${
+                    source.url
+                    ? `
+                        <a
+                            href="${escapeHTML(source.url)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Open Source
+                        </a>
+                    `
+                    : ""
+                }
 
             </div>
+        `;
 
-        `)
+    })
+    .join("");
 
-        .join("");
 
+const poisHTML = (incident.pois || [])
+    .map((poi, index) => `
+
+        <div class="poi">
+
+            <strong>
+                POI ${index + 1}
+            </strong>
+
+            <br><br>
+
+            ${escapeHTML(
+                typeof poi === "string"
+                    ? poi
+                    : poi.question || poi.text || ""
+            )}
+
+        </div>
+
+    `)
+    .join("");
 
         card.innerHTML = `
 
